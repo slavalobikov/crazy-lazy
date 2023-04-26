@@ -1,0 +1,96 @@
+@import "src/style/common";
+
+.block {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background: $orange;
+
+
+  .background {
+    width: 100%;
+  }
+
+  .wrapper {
+    position: absolute;
+    top: 0;
+    max-width: 1440px;
+    width: 100%;
+
+    .pink_bottle {
+      width: 228px;
+      position: absolute;
+      right: 125px;
+      top:100px;
+    }
+
+    .cumkvat {
+      z-index: 1;
+      position: absolute;
+      right: 38px;
+      top: 238px;
+      width: 170px;
+    }
+
+    .watermelon_text {
+      right: 385px;
+      position: absolute;
+      top: 408px;
+    }
+
+    .overlay_hidden {
+      position: absolute;
+      width: 900px;
+      height: 1000px;
+
+    }
+
+    .lazyPeople {
+      position: absolute;
+      left: 33px;
+      top: 524px;
+      cursor: pointer;
+      transition: all 0.5s ease-out;
+    }
+
+    .lazy_people_hover {
+      transform: scale(1.15);
+    }
+
+    .union_pink {
+      position: absolute;
+      top: 31px;
+      left: 86px;
+      opacity: 0;
+      transition: all 0.5s ease-out;
+    }
+
+    .union_pink_show {
+      opacity: 1;
+      display: block;
+    }
+
+    .union_pink_text {
+      position: absolute;
+      width: 650px;
+      font-family: 'Yanone Kaffeesatz';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 45px;
+      line-height: 111.2%;
+      text-align: center;
+      text-transform: uppercase;
+      color: #EB627E;
+      z-index: 2;
+      top: 126px;
+      left: 139px;
+      opacity: 0;
+      transition: all 0.5s ease-out;
+    }
+
+    .show_union_text {
+      opacity: 1;
+    }
+  }
+
+}
