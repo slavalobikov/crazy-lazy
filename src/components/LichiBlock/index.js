@@ -11,7 +11,7 @@ import s from './LichiBlock.module.scss';
 import classNames from "classnames";
 
 const LichiBlock = () => {
-    const [isPinkLichiHover, setIsPinkLichiHover] = useState(true)
+    const [isPinkLichiHover, setIsPinkLichiHover] = useState(false)
     return <div className={s.block}>
         <img className={s.background} src={linch_yellow_background} alt="background"/>
         <div className={s.wrapper}>
