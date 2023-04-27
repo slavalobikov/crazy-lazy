@@ -1,25 +1,28 @@
 {
   "files": {
-    "main.css": "/crazy-lazy/static/css/main.4ad445fd.css",
-    "main.js": "/crazy-lazy/static/js/main.d96a3be3.js",
+    "main.css": "/crazy-lazy/static/css/main.9249baa6.css",
+    "main.js": "/crazy-lazy/static/js/main.12fbc6e1.js",
     "static/media/pink_bottle.png": "/crazy-lazy/static/media/pink_bottle.7ef4d1c2ddc47632cca0.png",
+    "static/media/yellow_bottle.png": "/crazy-lazy/static/media/yellow_bottle.d9a6eeea4e15cadec49b.png",
     "static/media/fruits_logo.png": "/crazy-lazy/static/media/fruits_logo.e055a076b632c59ebd3a.png",
     "static/media/logo.png": "/crazy-lazy/static/media/logo.0668b30998ddba392afa.png",
     "static/media/orange_wave.png": "/crazy-lazy/static/media/orange_wave.33f0be19db779d67b912.png",
     "static/media/watermelon_text.png": "/crazy-lazy/static/media/watermelon_text.5ae29c1c3949aea16672.png",
     "static/media/lazy_pink.png": "/crazy-lazy/static/media/lazy_pink.ea5d8179710b94a98e10.png",
     "static/media/vitamin_b.png": "/crazy-lazy/static/media/vitamin_b.eaa65db05bf72a0f0637.png",
+    "static/media/crazy_kent.png": "/crazy-lazy/static/media/crazy_kent.3970f521ed5324256715.png",
     "static/media/coffe.png": "/crazy-lazy/static/media/coffe.ac0387290398c1105d24.png",
     "static/media/union_pink.png": "/crazy-lazy/static/media/union_pink.aff9f21a2053e044ffd3.png",
     "static/media/cumkvat.png": "/crazy-lazy/static/media/cumkvat.5343c9ebbaf5036a0254.png",
     "static/media/taurin.png": "/crazy-lazy/static/media/taurin.1aa7f89732b5fa216b5c.png",
+    "static/media/union_yellow.png": "/crazy-lazy/static/media/union_yellow.35bb114bc8c692e5ee6b.png",
     "static/media/logo.svg": "/crazy-lazy/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/crazy-lazy/index.html",
-    "main.4ad445fd.css.map": "/crazy-lazy/static/css/main.4ad445fd.css.map",
-    "main.d96a3be3.js.map": "/crazy-lazy/static/js/main.d96a3be3.js.map"
+    "main.9249baa6.css.map": "/crazy-lazy/static/css/main.9249baa6.css.map",
+    "main.12fbc6e1.js.map": "/crazy-lazy/static/js/main.12fbc6e1.js.map"
   },
   "entrypoints": [
-    "static/css/main.4ad445fd.css",
-    "static/js/main.d96a3be3.js"
+    "static/css/main.9249baa6.css",
+    "static/js/main.12fbc6e1.js"
   ]
 }
