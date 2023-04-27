@@ -1,10 +1,12 @@
 {
   "files": {
-    "main.css": "/crazy-lazy/static/css/main.9249baa6.css",
-    "main.js": "/crazy-lazy/static/js/main.12fbc6e1.js",
+    "main.css": "/crazy-lazy/static/css/main.5fc1bb79.css",
+    "main.js": "/crazy-lazy/static/js/main.36f68543.js",
     "static/media/pink_bottle.png": "/crazy-lazy/static/media/pink_bottle.7ef4d1c2ddc47632cca0.png",
+    "static/media/orange_bottle.png": "/crazy-lazy/static/media/orange_bottle.5aa8ecfeed65047c5b0d.png",
     "static/media/yellow_bottle.png": "/crazy-lazy/static/media/yellow_bottle.d9a6eeea4e15cadec49b.png",
     "static/media/fruits_logo.png": "/crazy-lazy/static/media/fruits_logo.e055a076b632c59ebd3a.png",
+    "static/media/lazy_orange_people.png": "/crazy-lazy/static/media/lazy_orange_people.a9170ed23b86febdb678.png",
     "static/media/logo.png": "/crazy-lazy/static/media/logo.0668b30998ddba392afa.png",
     "static/media/orange_wave.png": "/crazy-lazy/static/media/orange_wave.33f0be19db779d67b912.png",
     "static/media/watermelon_text.png": "/crazy-lazy/static/media/watermelon_text.5ae29c1c3949aea16672.png",
@@ -18,11 +20,11 @@
     "static/media/union_yellow.png": "/crazy-lazy/static/media/union_yellow.35bb114bc8c692e5ee6b.png",
     "static/media/logo.svg": "/crazy-lazy/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/crazy-lazy/index.html",
-    "main.9249baa6.css.map": "/crazy-lazy/static/css/main.9249baa6.css.map",
-    "main.12fbc6e1.js.map": "/crazy-lazy/static/js/main.12fbc6e1.js.map"
+    "main.5fc1bb79.css.map": "/crazy-lazy/static/css/main.5fc1bb79.css.map",
+    "main.36f68543.js.map": "/crazy-lazy/static/js/main.36f68543.js.map"
   },
   "entrypoints": [
-    "static/css/main.9249baa6.css",
-    "static/js/main.12fbc6e1.js"
+    "static/css/main.5fc1bb79.css",
+    "static/js/main.36f68543.js"
   ]
 }
