@@ -1,9 +1,133 @@
 @import "src/style/common";
 
 .orange_block {
-  //background: $orange;
+  position: relative;
 
   .orange_wave {
     width: 100%;
+    margin-top: -500px;
+
+    @include media-down(1650px) {
+      margin-top: -385px;
+    }
+  }
+
+  .wrapper {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    .relative {
+      position: relative;
+
+      .yellow_bottle {
+        position: absolute;
+        left: 115px;
+        top: -172px;
+        width: 300px;
+        height: 775px;
+      }
+
+      .cirkle_1 {
+        position: absolute;
+        width: 80px;
+        height: 90px;
+        top: 208px;
+        left: 135px;
+      }
+
+      .cirkle_2 {
+        width: 65px;
+        height: 75px;
+        position: absolute;
+        top: 295px;
+        left: 73px;
+      }
+
+      .energy {
+        position: absolute;
+        filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+        width: 216.45px;
+        height: 128.06px;
+        top: 540px;
+      }
+
+      .yellow_spray {
+        position: absolute;
+        top: -156px;
+        left: 478px;
+      }
+
+      .crazy_linch {
+        position: absolute;
+        top: 56px;
+        left: 260px;
+        z-index: 2;
+        cursor: pointer;
+        transition: all 0.5s ease-out;
+      }
+
+      .pineapple_linchi {
+        position: absolute;
+        top: 411px;
+        left: 596px;
+      }
+
+      .union {
+        position: absolute;
+        left: 539px;
+        top: -196px;
+        opacity: 0;
+        transition: all 0.5s ease-out;
+      }
+
+      .linch_show {
+        transform: scale(1.15);
+      }
+
+      .union_text {
+        font-family: 'Yanone Kaffeesatz';
+        font-style: normal;
+        font-weight: 700;
+        font-size: rem(45);
+        line-height: 111.2%;
+        text-align: center;
+        text-transform: uppercase;
+        color: #94C11E;
+        width: 610px;
+        position: absolute;
+        left: 649px;
+        opacity: 0;
+        transition: all 0.5s ease-out;
+      }
+
+      .union_show {
+        transition: all 0.5s ease-out;
+        opacity: 1;
+      }
+
+      .overlay {
+        position: absolute;
+        border: solid 3px red;
+        height: 900px;
+        width: 1144px;
+        top: -184px;
+        left: 220px;
+        z-index: 3;
+      }
+
+      .cirkle_3 {
+        right: 61px;
+        width: 93px;
+        height: 107px;
+        position: absolute;
+        top: 469px;
+      }
+
+    }
   }
 }
