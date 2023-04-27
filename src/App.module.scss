@@ -1,4 +1,11 @@
+@import "src/style/common";
+
 .black_line {
   height: 30px;
   background: #000000;
+}
+
+.yellow_line_after_block {
+  background: $yellow;
+  height: 80px;
 }

@@ -41,10 +41,6 @@ const OrangeBlock = () => {
                     <img className={s.cirkle_3} src={cirkle} alt="ягода"/>
                 </div>
             </div>
-
-            {/*
-            <img className={s.yellow_background} src={yellow_bacground} alt="background wave"/>
-*/}
         </div>
     )
 }
