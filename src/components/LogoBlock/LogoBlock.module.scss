@@ -19,12 +19,6 @@
     position: absolute;
     left: 11.4vw;
     top: 46vw;
-    /*transition: all 0.3s;
-    cursor: pointer;
-
-    &:hover {
-      transform: scale(1.1);
-    }*/
   }
 }
 
@@ -58,6 +52,7 @@
     left: 20px;
     bottom: 0;
     transform: translate(0, 50%) rotate(-16.28deg);
+    z-index: 2;
 
     @include media-down(1375px) {
       display: none;

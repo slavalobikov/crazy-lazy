@@ -1,5 +1,85 @@
 @import "src/style/common";
 
+.wrapper {
+  background: $orange;
+  position: relative;
+
+  .background {
+    width: 100vw;
+  }
+
+  .pink_bottle {
+    position: absolute;
+    top: 10vw;
+    height: 58vw;
+    width: 30vw;
+    right: 2.8vw;
+  }
+
+  .watermelon_text {
+    position: absolute;
+    right: 33.7vw;
+    top: 35.7vw;
+    width: 35.8vw;
+    height: 30vw;
+  }
+
+  .lazyPeople {
+    position: absolute;
+    left: 2.3vw;
+    //bottom: 13.2vw;
+    width: 25vw;
+    height: 31.5vw;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+  }
+
+  .lazy_people_animation {
+    animation: up 3s ease-out;
+    animation-fill-mode: forwards;
+  }
+
+  .union_pink {
+    position: absolute;
+    //bottom: 0vw;
+    //bottom: 41.5vw;
+    left: 6.3vw;
+    width: 52.6vw;
+    height: 30.5vw;
+    opacity: 0;
+    transition: all 0.5s ease-out;
+  }
+
+  .union_pink_show {
+    opacity: 1;
+    display: block;
+  }
+
+  .union_animation {
+    animation: upUnion 3s ease-out;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes up {
+    from {
+      bottom: 0
+    }
+    to {
+      bottom: 13.2vw;
+    }
+  }
+
+  @keyframes upUnion {
+    from {
+      bottom: 0
+    }
+    to {
+      bottom: 41.5vw;
+    }
+  }
+}
+
+/*
 .block {
   display: flex;
   justify-content: center;
@@ -93,4 +173,4 @@
     }
   }
 
-}
+}*/
