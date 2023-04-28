@@ -1,0 +1,116 @@
+@import 'src/style/common';
+
+.block {
+  min-height: 150vh;
+  height: 1020px;
+  background: $orange;
+  position: relative;
+
+  .taurin {
+    position: absolute;
+    //width: 200px;
+    height: 200px;
+    top: 175px;
+    transform: rotate(90deg) scale(1.5);
+    left: 0;
+  }
+
+  .vitamin_b {
+    position: absolute;
+    left: 97px;
+    top: -60px;
+  }
+
+  .mobilka {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 761px;
+    height: 428px;
+    transform: translate(-50%, -50%) rotate(90deg);
+    background: #000000;
+    border-radius: 63px;
+
+    .relative {
+      position: relative;
+
+      .video_placeholder {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 5%);
+        width: 723px;
+        height: 387px;
+        background: #BCB7B7;
+        border-radius: 45px;
+        z-index: 5;
+      }
+
+      .cafe {
+        position: absolute;
+        top: -141px;
+        right: -112px;
+        z-index: 6;
+        transform: scale(1.5);
+      }
+
+      .eyebrow {
+        position: absolute;
+        left: -25px;
+        top: 200px;
+        width: 111px;
+        height: 25px;
+        background: #000000;
+        border-radius: 0 0 12.5px 12.5px;
+        transform: rotate(-90deg);
+        z-index: 7;
+      }
+
+    }
+  }
+
+  .people {
+    position: absolute;
+    width: 319px;
+    height: 569px;
+    left: 58px;
+    bottom: 60px;
+    cursor: pointer;
+  }
+
+  .union {
+    position: absolute;
+    bottom: 448px;
+    left: 280px;
+    opacity: 0;
+    transition: all 0.5s ease-out;
+  }
+
+  .union_show {
+    transition: all 0.5s ease-out;
+    opacity: 1;
+  }
+
+  .union_text {
+    font-family: 'Yanone Kaffeesatz';
+    font-style: normal;
+    font-weight: 500;
+    font-size: rem(43);
+    line-height: 44px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #EB627E;
+    position: absolute;
+    bottom: 560px;
+    left: 370px;
+    opacity: 0;
+  }
+
+  .union_text_show {
+    opacity: 1;
+  }
+
+  .melon_1 {
+    position: absolute;
+  }
+}

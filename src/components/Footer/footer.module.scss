@@ -1,0 +1,66 @@
+@import 'src/style/common';
+
+.footer {
+  height: 262px;
+  background: #000000;
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  color: $white;
+
+  .first_line {
+    padding-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .inst_icon {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 10px;
+
+      .star_instagram {
+        transition: all 0.5s ease-out;
+        cursor: pointer;
+
+        &:hover {
+          path {
+            fill: $yellow;
+          }
+        }
+      }
+
+      .inst {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+
+      }
+    }
+
+  }
+
+  .second_line {
+    margin-top: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      color: #EB627E;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+        color: $yellow;
+      }
+    }
+  }
+
+}

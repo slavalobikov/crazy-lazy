@@ -3,6 +3,10 @@
 .black_line {
   height: 30px;
   background: #000000;
+
+  @include phone-down() {
+    height: 10px;
+  }
 }
 
 .yellow_line_after_block {

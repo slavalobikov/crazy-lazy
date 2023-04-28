@@ -12,6 +12,7 @@ import union_yellow from './../../assets/img/union_yellow.png';
 
 import s from './OrangeBlock.module.scss';
 import classNames from "classnames";
+import vitamin_b_green from "../../assets/img/vitamin_b_green.png";
 
 const OrangeBlock = () => {
     const [isHover, setIsHover] = useState(false)
@@ -39,6 +40,7 @@ const OrangeBlock = () => {
                         идеи и покорять миры. Да, в играх тоже считается! Тропик вкус, кайфовый, как летний день!
                     </div>
                     <img className={s.cirkle_3} src={cirkle} alt="ягода"/>
+                    <img className={s.vitamin_b} src={vitamin_b_green} alt="витамин B"/>
                 </div>
             </div>
         </div>

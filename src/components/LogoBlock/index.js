@@ -15,41 +15,101 @@ import taurin from './../../assets/img/taurin.png';
 
 const LogoBlock = () => {
     return (
-        <div className={s.wrapper}>
-            <div className={s.black_block}>
-                <img className={s.background_black} src={backgroundBlack} alt="logo"/>
-                <div className={s.logo_wrapper}>
-                    <img className={s.logo} src={logo} alt="crazy lazy energy"/>
-                    <img className={s.fruits} src={fruits} alt="фрукты и витамины"/>
-                    <img className={s.logo_subword} src={logo_subword} alt="Ты совсем crazy lazy?"/>
-                </div>
-                <div className={s.pink_block}>
-                    <img className={s.energy} src={energy} alt="energy"/>
-                    <img className={s.coffe} src={coffe} alt="кофеин"/>
-                    <img className={s.vitamin_b} src={vitamin_b} alt="Витамин B"/>
-                    <img className={s.taurin} src={taurin} alt="Таурин"/>
-                    <div className={s.text}>
-                        <div>
-                            Новый <b>Energy напиток</b>, который ты точно оценишь. Для настроения тут самые <b>Crazy
-                            цвета и вкусы!</b>
-                            <img className={s.smile} src={smile} alt="мордочка"/>
+        /*
+                <div className={s.wrapper}>
+                    <div className={s.black_block}>
+                        <img className={s.background_black} src={backgroundBlack} alt="logo"/>
+                        <div className={s.logo_wrapper}>
+                            <img className={s.logo} src={logo} alt="crazy lazy energy"/>
+                            <img className={s.fruits} src={fruits} alt="фрукты и витамины"/>
+                            <img className={s.logo_subword} src={logo_subword} alt="Ты совсем crazy lazy?"/>
                         </div>
-                        <div className={s.text_description}>
+                        <div className={s.pink_block}>
+                            <img className={s.energy} src={energy} alt="energy"/>
+                            <img className={s.coffe} src={coffe} alt="кофеин"/>
+                            <img className={s.vitamin_b} src={vitamin_b} alt="Витамин B"/>
+                            <img className={s.taurin} src={taurin} alt="Таурин"/>
+                            <div className={s.text}>
+                                <div>
+                                    Новый <b>Energy напиток</b>, который ты точно оценишь. Для настроения тут самые <b>Crazy
+                                    цвета и вкусы!</b>
+                                    <img className={s.smile} src={smile} alt="мордочка"/>
+                                </div>
+                                <div className={s.text_description}>
+                                <span>Содержит таурин, кофеин и витамины, доступен всем-всем.
+                                    <img className={s.fruits_text} src={fruits_text} alt="fruit"/></span>
+                                    <span className={s.empty_span}/>
+                                    <span>Еще не успел попробовать?</span>
+                                    <span className={s.last_string}>
+                                        <span className={s.empty_span}/>
+                                        <img className={s.smile_two} src={smile_two} alt="мордочка"/>
+                                        Ты совсем  <b>  Crazy Lazy</b>? 
+                                        <button className={s.btn}>→ Зацени эти вкусы!</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        */
+        <>
+            <div className={s.wrapper_logo}>
+                <img className={s.background_black} src={backgroundBlack} alt="logo"/>
+                <img className={s.logo} src={logo} alt="crazy lazy energy"/>
+                <img className={s.logo_subword} src={logo_subword} alt="Ты совсем crazy lazy?"/>
+            </div>
+            <div className={s.wrapper_pink}>
+                <img className={s.coffe} src={coffe} alt="кофеин"/>
+                <img className={s.energy} src={energy} alt="energy"/>
+                <img className={s.vitamin_b} src={vitamin_b} alt="Витамин B"/>
+                <img className={s.taurin} src={taurin} alt="Таурин"/>
+
+
+                <div className={s.text}>
+                    <div>
+                        Новый <b>Energy напиток</b>, который ты точно оценишь. Для настроения тут самые <b>Crazy
+                        цвета и вкусы! </b>
+                        <img className={s.smile} src={smile} alt="мордочка"/>
+                    </div>
+                    <div className={s.text_description}>
                         <span>Содержит таурин, кофеин и витамины, доступен всем-всем.
                             <img className={s.fruits_text} src={fruits_text} alt="fruit"/></span>
-                            <span className={s.empty_span}/>
-                            <span>Еще не успел попробовать?</span>
-                            <span className={s.last_string}>
+
+                        <span className={s.empty_span}/>
+
+                        <span>Еще не успел попробовать?</span>
+                        <span className={s.last_string}>
                                 <span className={s.empty_span}/>
                                 <img className={s.smile_two} src={smile_two} alt="мордочка"/>
                                 Ты совсем  <b>  Crazy Lazy</b>? 
                                 <button className={s.btn}>→ Зацени эти вкусы!</button>
                             </span>
+                    </div>
+
+                </div>
+
+                <div className={s.text_mobile}>
+                    <div>
+                        Новый <b>Energy напиток</b>, который <img className={s.smile} src={smile} alt="мордочка"/> ты
+                        точно оценишь. Для настроения тут самые <b>Crazy
+                        цвета и вкусы! </b>
+
+                    </div>
+                    <div className={s.text_description}>
+                        <span>Содержит таурин, кофеин и витамины, доступен всем-всем. 
+                            <img className={s.fruits_text} src={fruits_text} alt="fruit"/> 
+                        </span>
+                        <span>Еще не успел попробовать?</span><br/>
+                        <div className={s.last_string}>
+                            <img className={s.smile_two} src={smile_two} alt="мордочка"/>
+                            Ты совсем <b> Crazy Lazy</b>? → <br/>
+                            Зацени эти вкусы!
                         </div>
                     </div>
+
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 

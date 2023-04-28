@@ -113,17 +113,42 @@
     top: 383px;
     transform: rotate(45deg);
     left: -31px;
+    animation: rotation 5s infinite linear;
   }
 
   .melon_2 {
     position: absolute;
     top: 460px;
     left: 80px;
+    animation: rotationAnother 5s infinite linear;
   }
 
   .melon_text {
     position: absolute;
     top: 558px;
     left: 166px;
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes rotationAnother {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }

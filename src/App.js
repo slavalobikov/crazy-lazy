@@ -4,6 +4,9 @@ import LogoBlock from "./components/LogoBlock";
 import LichiBlock from "./components/LichiBlock";
 import OrangeBlock from "./components/OrangeBlock";
 import YellowBlock from "./components/YellowBlock";
+import Footer from "./components/Footer";
+import SwiperBlock from "./components/SwiperBlock";
+import MobileBlock from "./components/MobileBlock";
 
 
 function App() {
@@ -11,11 +14,15 @@ function App() {
         <>
             <LogoBlock/>
             <div className={s.black_line} />
-            <LichiBlock />
+            {/*<LichiBlock />
             <OrangeBlock />
             <YellowBlock />
             <div className={s.yellow_line_after_block} />
             <div className={s.black_line} />
+            <SwiperBlock />
+            <div className={s.black_line} />
+            <MobileBlock />
+            <Footer />*/}
         </>
     );
 }

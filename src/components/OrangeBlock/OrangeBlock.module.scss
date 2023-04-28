@@ -32,6 +32,7 @@
         top: -172px;
         width: 300px;
         height: 775px;
+        animation: rotation 30s infinite linear;
       }
 
       .cirkle_1 {
@@ -48,6 +49,12 @@
         position: absolute;
         top: 295px;
         left: 73px;
+      }
+
+      .vitamin_b {
+        position: absolute;
+        right: 0;
+        top: -393px;
       }
 
       .energy {
@@ -131,5 +138,17 @@
       }
 
     }
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
