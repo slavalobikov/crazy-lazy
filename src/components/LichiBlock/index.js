@@ -7,6 +7,7 @@ import cumkvat from './../../assets/img/cumkvat.png';
 import watermelon_text from './../../assets/img/watermelon_text.png';
 import lazy_pink from './../../assets/img/lazy_pink.png';
 import union_pink from './../../assets/img/union_pink.png';
+import vitamin_b_green from './../../assets/img/vitamin_b_green.png';
 
 import s from './LichiBlock.module.scss';
 import classNames from "classnames";
@@ -22,12 +23,14 @@ const LichiBlock = ({refLich}) => {
     return (
         <div className={s.wrapper} ref={refLich}>
             <img className={s.background} src={linch_yellow_background} alt="background"/>
+            <img className={s.vitamin_b} src={vitamin_b_green} alt="витамин B"/>
             <img className={s.pink_bottle} src={pink_bottle} alt="бутылка crazy energy"/>
             <img
                 ref={ref}
                 className={s.watermelon_text} src={watermelon_text} alt="Арбуз кумкват конопля"/>
             <img
                 onMouseEnter={() => setIsPinkLichiHover(true)}
+                onMouseLeave={() => setIsPinkLichiHover(false)}
                 className={classNames(s.lazyPeople, {
                     [s.lazy_people_animation]: inView,
                     [s.lazy_people_hover]: isPinkLichiHover,

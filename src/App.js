@@ -22,12 +22,8 @@ function App() {
             <LogoBlock scrollToLich={scrollToLich}/>
             <div className={s.black_line}/>
             <LichiBlock refLich={refBlockLich}/>
-            {/*
-            <OrangeBlock />
-*/}
-            {/*
+            <OrangeBlock/>
             <YellowBlock />
-*/}
             {/*
             <div className={s.yellow_line_after_block} />
 */}

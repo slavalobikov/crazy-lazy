@@ -52,7 +52,7 @@
     left: 20px;
     bottom: 0;
     transform: translate(0, 50%) rotate(-16.28deg);
-    z-index: 2;
+    z-index: 7;
 
     @include media-down(1375px) {
       display: none;

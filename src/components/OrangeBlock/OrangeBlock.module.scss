@@ -1,154 +1,97 @@
 @import "src/style/common";
 
-.orange_block {
+.wrapper {
+  background: $yellow;
   position: relative;
-  z-index: 1;
-
 
   .orange_wave {
-    width: 100%;
-    margin-top: -500px;
-
-    @include media-down(1650px) {
-      margin-top: -385px;
-    }
+    position: relative;
+    width: 100vw;
+    margin-top: -22.292vw;
   }
 
-  .wrapper {
-    max-width: 1440px;
-    width: 100%;
-    margin: 0 auto;
+  .yellow_bottle {
     position: absolute;
-    top: 350px;
-    left: 50%;
-    transform: translate(-50%, 0);
+    z-index: 5;
+    left: 3.2vw;
+    top: 11.32vw;
+    width: 27.57vw;
+    height: 61.33vw;
+  }
 
-    .relative {
-      position: relative;
+  .energy {
+    position: absolute;
+    width: 15vw;
+    height: 8.89vw;
+    top: 68vw;
+    left: 0;
+    z-index: 5;
+  }
 
-      .yellow_bottle {
-        position: absolute;
-        left: 115px;
-        top: -172px;
-        width: 300px;
-        height: 775px;
-        animation: rotation 30s infinite linear;
-      }
+  .pineapple_linchi {
+    position: absolute;
+    bottom: 25vw;
+    left: 46.53vw;
+    width: 28vw;
+    height: 16.67vw;
+    z-index: 5;
+  }
 
-      .cirkle_1 {
-        position: absolute;
-        width: 80px;
-        height: 90px;
-        top: 208px;
-        left: 135px;
-      }
+  .berry {
+    position: absolute;
+    bottom: 29.86vw;
+    right: 3.4vw;
+    width: 6.46vw;
+    height: 7.43vw;
+  }
 
-      .cirkle_2 {
-        width: 65px;
-        height: 75px;
-        position: absolute;
-        top: 295px;
-        left: 73px;
-      }
+  .crazy_linch {
+    width: 25.2vw;
+    height: 39.24vw;
+    position: absolute;
+    left: 19.74vw;
+    bottom: 10vw;
+    cursor: pointer;
+    z-index: 5;
+  }
 
-      .vitamin_b {
-        position: absolute;
-        right: 0;
-        top: -393px;
-      }
+  .yellow_spray {
+    position: absolute;
+    top: 10.486vw;
+    left: 33.194vw;
+    z-index: 4;
+    width: 7.014vw;
+    height: 11.73vw;
+  }
 
-      .energy {
-        position: absolute;
-        filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
-        width: 216.45px;
-        height: 128.06px;
-        top: 540px;
-      }
+  .union {
+    position: absolute;
+    left: 36.46vw;
+    top: 9.37vw;
+    width: 53.96vw;
+    height: 42.3vw;
+    z-index: 4;
+    transition: all 0.5s ease-out;
+    opacity: 0;
+  }
 
-      .yellow_spray {
-        position: absolute;
-        top: -156px;
-        left: 478px;
-      }
+  .union_show {
+    transition: all 0.5s ease-out;
+    opacity: 1;
+  }
 
-      .crazy_linch {
-        position: absolute;
-        top: 56px;
-        left: 260px;
-        z-index: 2;
-        cursor: pointer;
-        transition: all 0.5s ease-out;
-      }
-
-      .pineapple_linchi {
-        position: absolute;
-        top: 411px;
-        left: 596px;
-      }
-
-      .union {
-        position: absolute;
-        left: 539px;
-        top: -196px;
-        opacity: 0;
-        transition: all 0.5s ease-out;
-      }
-
-      .linch_show {
-        transform: scale(1.15);
-      }
-
-      .union_text {
-        font-family: 'Yanone Kaffeesatz';
-        font-style: normal;
-        font-weight: 700;
-        font-size: rem(45);
-        line-height: 111.2%;
-        text-align: center;
-        text-transform: uppercase;
-        color: #94C11E;
-        width: 610px;
-        position: absolute;
-        left: 649px;
-        opacity: 0;
-        transition: all 0.5s ease-out;
-      }
-
-      .union_show {
-        transition: all 0.5s ease-out;
-        opacity: 1;
-      }
-
-      .overlay {
-        position: absolute;
-        border: solid 3px red;
-        height: 900px;
-        width: 1144px;
-        top: -184px;
-        left: 220px;
-        z-index: 3;
-      }
-
-      .cirkle_3 {
-        right: 61px;
-        width: 93px;
-        height: 107px;
-        position: absolute;
-        top: 469px;
-      }
-
-    }
+  .linch_animation {
+    animation: up 4s ease-out;
+    animation-fill-mode: forwards;
   }
 }
 
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
+
+@keyframes up {
+  from {
+    bottom: 10vw;
   }
-  50% {
-    transform: rotate(10deg);
-  }
-  100% {
-    transform: rotate(0deg);
+  to {
+    bottom: 25.81vw;
   }
 }
