@@ -1,18 +1,177 @@
 @import "src/style/common";
 
 .swiper_block {
-  height: 100vh;
+  height: 78vw;
   background: $pink;
   scroll-snap-align: start;
-  padding-top: 55px;
+  padding-top: 3.8194vw;
+  position: relative;
 
   .video_block {
     margin-left: auto;
     margin-right: auto;
-    width: 1110px;
-    height: 622px;
+    width: 77.083vw;
+    height: 42.194vw;
     background: #BCB7B7;
-    border: 3px solid #000000;
-    border-radius: 63px;
+    border: 0.2083vw solid #000000;
+    border-radius: 4.375vw;
+  }
+
+  .button_yellow {
+    margin-top: 3.1944vw;
+    margin-left: 11.0417vw;
+    position: relative;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    display: block;
+
+    img {
+      width: 17.57vw;
+      height: 8.9583vw;
+    }
+
+    &:hover {
+      .text {
+        transition: all 0.2s ease-out;
+        color: #FFFFFF;
+      }
+    }
+
+    .text {
+      position: absolute;
+      pointer-events: none;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: all 0.2s ease-out;
+      font-family: 'Yanone Kaffeesatz';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 6.25vw;
+      line-height: 6.1806vw;
+      text-align: center;
+    }
+  }
+
+  .button_while {
+    position: relative;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 11.0417vw;
+    margin-top: 1.042vw;
+
+    img {
+      width: 17.57vw;
+      height: 8.9583vw;
+    }
+
+    &:hover {
+      .text {
+        transition: all 0.2s ease-out;
+        color: #000000;
+      }
+    }
+
+    .text {
+      transition: all 0.2s ease-out;
+      pointer-events: none;
+      position: absolute;
+      left: 50%;
+      top: 47%;
+      transform: translate(-50%, -50%);
+      width: 11.875vw;
+      font-family: 'Yanone Kaffeesatz';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 2.9861vw;
+      line-height: 3.0556vw;
+      text-align: center;
+      text-transform: uppercase;
+      color: #EB627E;
+    }
+  }
+
+  .pears {
+    pointer-events: none;
+    position: absolute;
+    left: 2.222vw;
+    z-index: 2;
+    bottom: 14.0278vw;
+    width: 14.0278vw;
+    height: 27.9167vw;
+  }
+
+  .crazy {
+    pointer-events: none;
+    width: 22.222vw;
+    height: 34.583vw;
+    position: absolute;
+    bottom: 4.93056vw;
+    left: 21.7361vw;
+    z-index: 5;
+  }
+
+  .lazy_show {
+    width: 36.597vw;
+    height: 25.208vw;
+    position: absolute;
+    bottom: 4.444vw;
+    right: 12.361vw;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .crazy_union {
+    width: 30.611vw;
+    height: 21.597vw;
+    position: absolute;
+    right: 6.542vw;
+    bottom: 21.736vw;
+    transition: all 0.5s ease-out;
+    opacity: 0;
+  }
+
+  .crazy_2 {
+    cursor: pointer;
+    position: absolute;
+    left: 35.833vw;
+    bottom: 4.097vw;
+    width: 34.72vw;
+    height: 35.9vw;
+  }
+
+  .crazy_2_union {
+    width: 30.611vw;
+    height: 21.597vw;
+    position: absolute;
+    bottom: 22.847vw;
+    right: 6.542vw;
+    opacity: 0;
+    transition: all 0.5s ease-out;
+  }
+
+  .crazy_3 {
+    width: 29.93vw;
+    height: 43.056vw;
+    position: absolute;
+    bottom: 3.125vw;
+    left: 37.71vw;
+    cursor: pointer;
+  }
+
+  .crazy_4 {
+    width: 36.18vw;
+    height: 38.89vw;
+    position: absolute;
+    left: 38.33vw;
+    bottom: 2.85vw;
+    cursor: pointer;
+  }
+
+  .union_show {
+    opacity: 1;
+    transition: all 0.5s ease-out;
   }
 }

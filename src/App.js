@@ -7,14 +7,23 @@ import YellowBlock from "./components/YellowBlock";
 import Footer from "./components/Footer";
 import SwiperBlock from "./components/SwiperBlock";
 import MobileBlock from "./components/MobileBlock";
-import {useRef} from "react";
+import {useRef, useState} from "react";
 
 
 function App() {
     const refBlockLich = useRef(null);
+    const refMobileBlock = useRef(null);
+    const [isMobileBlockShow, setIsMobileBlockShow] = useState(false)
 
     const scrollToLich = () => {
         refBlockLich?.current?.scrollIntoView({behavior: "smooth"})
+    }
+
+    const clickToSecretButton = () => {
+        setIsMobileBlockShow(true)
+        setTimeout(() => {
+            refMobileBlock?.current?.scrollIntoView({behavior: "smooth"})
+        }, 300)
     }
 
     return (
@@ -23,22 +32,11 @@ function App() {
             <div className={s.black_line}/>
             <LichiBlock refLich={refBlockLich}/>
             <OrangeBlock/>
-            <YellowBlock />
-            {/*
-            <div className={s.yellow_line_after_block} />
-*/}
-            {/*
-            <div className={s.black_line} />
-*/}
-            {/*
-            <SwiperBlock />
-*/}
-            {/*
-            <div className={s.black_line} />
-*/}
-            {/*
-            <MobileBlock />
-*/}
+            <YellowBlock/>
+            <div className={s.black_line}/>
+            <SwiperBlock clickToSecretButton={clickToSecretButton}/>
+            <div className={s.black_line}/>
+            <MobileBlock refMobileBlock={refMobileBlock} isMobileBlockShow={isMobileBlockShow}/>
             {/*
             <Footer />
 */}
