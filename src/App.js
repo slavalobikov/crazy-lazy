@@ -37,9 +37,7 @@ function App() {
             <SwiperBlock clickToSecretButton={clickToSecretButton}/>
             <div className={s.black_line}/>
             <MobileBlock refMobileBlock={refMobileBlock} isMobileBlockShow={isMobileBlockShow}/>
-            {/*
             <Footer />
-*/}
         </>
     );
 }

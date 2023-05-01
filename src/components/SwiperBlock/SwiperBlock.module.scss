@@ -6,6 +6,7 @@
   scroll-snap-align: start;
   padding-top: 3.8194vw;
   position: relative;
+  overflow-x: clip;
 
   .video_block {
     margin-left: auto;
@@ -101,6 +102,8 @@
     bottom: 14.0278vw;
     width: 14.0278vw;
     height: 27.9167vw;
+    transition: all 0.5s ease-out;
+    opacity: 0;
   }
 
   .crazy {
@@ -111,6 +114,8 @@
     bottom: 4.93056vw;
     left: 21.7361vw;
     z-index: 5;
+    transition: all 0.5s ease-out;
+    opacity: 0;
   }
 
   .lazy_show {
@@ -173,5 +178,39 @@
   .union_show {
     opacity: 1;
     transition: all 0.5s ease-out;
+  }
+
+  .animatin_common {
+    transition: all 0.5s ease-out;
+    opacity: 1;
+  }
+
+  .animation_start {
+      animation: start 0.2s ease-out;
+      animation-fill-mode: forwards;
+  }
+
+  .first_animation_end {
+    animation: endFirst 0.1s ease-out;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes endFirst {
+    from {
+      //right: 12.361vw;
+      left: 51.042vw;
+    }
+    to {
+      left: 100vw;
+    }
+  }
+
+  @keyframes start {
+    from {
+      left: 29.33vw;
+    }
+    to {
+      left: 35.833vw;
+    }
   }
 }

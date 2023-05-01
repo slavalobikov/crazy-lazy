@@ -23,6 +23,7 @@ const Footer = () => {
 
         </div>
         <div className={s.second_line}>А если ты из прошлого века, то вот email: <a href="mailto:crazylazy@gmail.com"> crazylazy@gmail.com</a></div>
+        <div className={s.mobile}></div>
     </footer>
 }
 

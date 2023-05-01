@@ -19,23 +19,29 @@ import classNames from "classnames";
 const SwiperBlock = ({clickToSecretButton}) => {
     const [isHover, setIsHover] = useState(false);
     const [count, setCount] = useState(0);
+    const [countPrev, setCountPrev] = useState(null);
 
     const nextSlide = () => {
         if (count === 3) {
             return setCount(0)
         }
+        setCountPrev(count);
         setCount(prev => prev + 1)
     }
 
     return (
         <div className={s.swiper_block}>
-            {count === 0 && <>
-                <img className={s.pears} src={pears} alt="груши"/>
-                <img className={s.crazy} src={crazy} alt="крези смотрит на кнопку"/>
+            <img className={classNames(s.pears, {
+                [s.animatin_common]: count === 0
+            })} src={pears} alt="груши"/>
+            <img className={classNames(s.crazy, {
+                [s.animatin_common]: count === 0
+            })} src={crazy} alt="крези смотрит на кнопку"/>
+            {(count === 0) && <>
                 <img
                     onMouseLeave={() => setIsHover(false)}
                     onMouseEnter={() => setIsHover(true)}
-                    className={s.lazy_show}
+                    className={classNames(s.lazy_show,)}
                     src={lazy_show_table}
                     alt="лейзи показывает таблицу crazy-lazy energy"
                 />
@@ -52,14 +58,16 @@ const SwiperBlock = ({clickToSecretButton}) => {
                 <img
                     onMouseEnter={() => setIsHover(true)}
                     onMouseLeave={() => setIsHover(false)}
-                    className={s.crazy_2}
+                    className={classNames(s.crazy_2, {
+                        [s.animation_start]: count === 1,
+                    })}
                     src={swiper_people_2}
                     alt="Быть одному можно только вместе! Всегда держи рядом друга! Вместе кринж не такой кринжовый,
                  а движ еще более движовый."
                 />
                 <img
                     className={classNames(s.crazy_2_union, {
-                        [s.union_show]: isHover
+                        [s.union_show]: isHover,
                     })}
                     src={crazy_union_2}
                     alt="Быть одному можно только вместе! Всегда держи рядом друга! Вместе кринж не такой кринжовый,
@@ -70,7 +78,10 @@ const SwiperBlock = ({clickToSecretButton}) => {
                 <img
                     onMouseEnter={() => setIsHover(true)}
                     onMouseLeave={() => setIsHover(false)}
-                    className={s.crazy_3}
+                    className={classNames(s.crazy_3, {
+                        [s.animation_start]: count === 2
+
+                    })}
                     src={crazy_3}
                     alt="крейзи жанглируешь грушами"
                 />
@@ -85,7 +96,9 @@ const SwiperBlock = ({clickToSecretButton}) => {
                 <img
                     onMouseEnter={() => setIsHover(true)}
                     onMouseLeave={() => setIsHover(false)}
-                    className={s.crazy_4}
+                    className={classNames(s.crazy_4, {
+                        [s.animation_start]: count === 3
+                    })}
                     src={crazy_4}
                     alt="Крейзи и лейзи кушают"
                 />
