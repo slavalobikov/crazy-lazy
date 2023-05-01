@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/crazy-lazy/static/css/main.3ab4fa7e.css",
-    "main.js": "/crazy-lazy/static/js/main.73c42351.js",
+    "main.css": "/crazy-lazy/static/css/main.6de4a402.css",
+    "main.js": "/crazy-lazy/static/js/main.efe24523.js",
     "static/media/logo.png": "/crazy-lazy/static/media/logo.114223627eb5ee696e6e.png",
     "static/media/pink_bottle.png": "/crazy-lazy/static/media/pink_bottle.91a58204cbf297206905.png",
     "static/media/orange_bottle.png": "/crazy-lazy/static/media/orange_bottle.b3a250d623c2d6dbed65.png",
@@ -25,11 +25,11 @@
     "static/media/vitamin_b_green.png": "/crazy-lazy/static/media/vitamin_b_green.a6495f2a2883aaea5a57.png",
     "static/media/logo.svg": "/crazy-lazy/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/crazy-lazy/index.html",
-    "main.3ab4fa7e.css.map": "/crazy-lazy/static/css/main.3ab4fa7e.css.map",
-    "main.73c42351.js.map": "/crazy-lazy/static/js/main.73c42351.js.map"
+    "main.6de4a402.css.map": "/crazy-lazy/static/css/main.6de4a402.css.map",
+    "main.efe24523.js.map": "/crazy-lazy/static/js/main.efe24523.js.map"
   },
   "entrypoints": [
-    "static/css/main.3ab4fa7e.css",
-    "static/js/main.73c42351.js"
+    "static/css/main.6de4a402.css",
+    "static/js/main.efe24523.js"
   ]
 }
