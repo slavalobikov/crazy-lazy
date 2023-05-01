@@ -6,6 +6,10 @@
 
   .background_black {
     width: 100vw;
+
+    @include phone-down() {
+      height: 85vw;
+    }
   }
 
   .logo {
@@ -19,6 +23,10 @@
     position: absolute;
     left: 11.4vw;
     top: 46vw;
+
+    @include phone-down() {
+      top: 54vw;
+    }
   }
 }
 
