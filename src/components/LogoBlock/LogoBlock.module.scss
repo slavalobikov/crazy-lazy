@@ -6,6 +6,7 @@
 
   .background_black {
     width: 100vw;
+    height: 60vw;
 
     @include phone-down() {
       height: 85vw;
@@ -16,6 +17,24 @@
     position: absolute;
     top: 0;
     width: 93vw;
+    display: none;
+
+    @include phone-down() {
+      display: block;
+    }
+  }
+
+  .logo_pc {
+    display: block;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 92.5vw;
+    height: 43.61vw;
+
+    @include phone-down() {
+      display: none;
+    }
   }
 
   .logo_subword {
@@ -23,9 +42,11 @@
     position: absolute;
     left: 11.4vw;
     top: 46vw;
+    display: none;
 
     @include phone-down() {
       top: 54vw;
+      display: block;
     }
   }
 }
@@ -39,60 +60,50 @@
   .energy {
     position: absolute;
     right: 0;
-    top: 43px;
-
-    @include media-down(1375px) {
-      display: none;
-    }
+    top: 2.99vw;
+    width: 14.86vw;
+    height: 8.06vw;
 
     @include laptop-down() {
       display: block;
-      top: 53px;
-      width: 60px;
-      height: 32px;
+      top: 14.72vw;
+      width: 16.67vw;
+      height: 8.89vw;
     }
   }
 
   .vitamin_b {
     position: absolute;
-    width: 205px;
-    height: 205px;
-    left: 20px;
+    width: 14.24vw;
+    height: 14.24vw;
+    left: 1.39vw;
     bottom: 0;
     transform: translate(0, 50%) rotate(-16.28deg);
     z-index: 7;
 
-    @include media-down(1375px) {
-      display: none;
-    }
-
     @include laptop-down() {
       display: block;
-      width: 65px;
-      height: 65px;
-      left: 10px;
+      width: 18.056vw;
+      height: 18.056vw;
+      left: 2.78vw;
       transform: translate(0, 10%) rotate(-16.28deg);
     }
   }
 
   .taurin {
-    width: 156px;
-    height: 156px;
+    width: 10.83vw;
+    height: 10.83vw;
     position: absolute;
     bottom: 0;
-    right: 17px;
+    right: 1.18vw;
     transform: translate(0, 13%) rotate(5.33deg);
-
-    @include media-down(1375px) {
-      display: none;
-    }
 
     @include laptop-down() {
       display: block;
-      width: 48px;
-      height: 48px;
-      bottom: 32px;
-      right: 35px;
+      width: 13.33vw;
+      height: 13.33vw;
+      bottom: 8.89vw;
+      right: 9.72vw;
     }
   }
 
@@ -111,10 +122,10 @@
 
     @include laptop-down() {
       display: block;
-      top: 62px;
-      left: -15px;
-      width: 60px;
-      height: 60px;
+      top: 17.22vw;
+      left: -4.17vw;
+      width: 16.67vw;
+      height: 16.67vw;
     }
   }
 
@@ -122,14 +133,14 @@
     display: block;
     margin: 0 auto;
     background: $pink;
-    width: 975px;
+    width: 67.71vw;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     color: $white;
     font-weight: 400;
-    font-size: rem(58);
-    line-height: 66px;
+    font-size: 4.03vw;
+    line-height: 4.58vw;
     position: relative;
-    padding-bottom: 60px;
+    padding-bottom: 4.17vw;
 
     @include laptop-down() {
       display: none;
@@ -142,24 +153,23 @@
 
     .smile {
       display: inline-block;
-/*      position: absolute;
-      top: 58px;
-      right: 19px;*/
+      width: 6.46vw;
+      height: 4.31vw;
     }
 
     .text_description {
-      margin-top: 20px;
+      margin-top: 1.39vw;
       position: relative;
 
       .fruits_text {
         position: absolute;
-        top: 56px;
-        left: 202px;
-        width: 218px;
+        top: 3.89vw;
+        left: 14.03vw;
+        width: 15.14vw;
       }
 
       .empty_span {
-        width: 228px;
+        width: 15.83vw;
         display: inline-block;
       }
 
@@ -169,17 +179,24 @@
 
         .smile_two {
           position: absolute;
-          top: -8px;
+          top: -0.56vw;
+          width: 8.96vw;
+          height: 4.24vw;
+
+          @include phone-down() {
+            width: 13.06vw;
+            height: 5.28vw;
+          }
         }
 
         .empty_span {
-          width: 135px;
+          width: 9.375vw;
         }
 
         .btn {
-          border-radius: 37px;
-          height: 63px;
-          width: 437px;
+          border-radius: 2.57vw;
+          height: 4.375vw;
+          width: 30.35vw;
           background: #FDC400;
           color: $white;
           cursor: pointer;
@@ -190,7 +207,7 @@
 
           &:hover {
             box-sizing: border-box;
-            border: solid 3px #FDC400;
+            border: solid 0.21vw #FDC400;
             background: #EB627E;
           }
         }
@@ -207,10 +224,11 @@
     font-family: 'Yanone Kaffeesatz';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 18px;
-    width: 205px;
-    padding-bottom: 45px;
+    //font-size: 16px;
+    font-size: 4.44vw;
+    line-height: 5vw;
+    width: 56.94vw;
+    padding-bottom: 12.5vw;
 
     @include laptop-down() {
       display: block;
@@ -222,260 +240,35 @@
 
     .smile {
       display: inline-block;
-      width: 32px;
-      height: 21px;
+      width: 8.89vw;
+      height: 5.83vw;
     }
 
     .text_description {
-      margin-top: 20px;
+      margin-top: 5.56vw;
       position: relative;
 
       .fruits_text {
         display: inline-block;
-        width: 54px;
-        height: 16px;
+        width: 15vw;
+        height: 4.44vw;
       }
 
       .empty_span {
-        width: 228px;
+        width: 63.33vw;
         display: inline-block;
       }
 
       .last_string {
-        margin-top: 20px;
+        margin-top: 5.56vw;
 
         .smile_two {
           display: inline-block;
-          width: 47px;
-          height: 14px;
+          width: 13.06vw;
+          height: 3.89vw;
         }
       }
-
     }
-
-
-
   }
 
 }
-
-/*
-.wrapper {
-  background: $pink;
-
-  .black_block {
-    position: relative;
-
-    .background_black {
-      width: 100%;
-
-      @include desktop-large-down() {
-        height: 1000px;
-      }
-
-      @include desktop-down() {
-        height: 900px;
-      }
-    }
-
-    .logo_wrapper {
-      position: absolute;
-      max-width: 1440px;
-      left: 50%;
-      transform: translate(-50%, 0);
-      width: 100%;
-      top: 0;
-
-      .fruits {
-        position: absolute;
-        width: 451px;
-        height: 649px;
-        right: 112px;
-        top: 192px;
-        animation: moved 30s ease-out;
-
-
-        @include desktop-down() {
-          animation: none;
-          right: 10px;
-          width: 400px;
-          height: 550px;
-        }
-
-        @include laptop-down() {
-          right: 46px;
-          width: 300px;
-          top: 171px;
-          height: 400px;
-        }
-
-        @include tablet-down() {
-          right: 60px;
-          width: 200px;
-          top: 125px;
-          height: 300px;
-        }
-      }
-
-      .logo_subword {
-        position: absolute;
-        left: 173px;
-        cursor: pointer;
-        width: 480px;
-        height: 159px;
-        transition: all 0.3s;
-
-        &:hover {
-          transform: scale(1.1);
-        }
-
-        @include desktop-down() {
-          width: 450px;
-          height: 140px;
-        }
-
-        @include laptop-down() {
-          width: 300px;
-          height: 130px;
-        }
-      }
-
-    }
-
-    .pink_block {
-      max-width: 1440px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      padding-top: 43px;
-      padding-bottom: 69px;
-
-      .energy {
-        position: absolute;
-        right: 0;
-        top: 43px;
-
-        @include media-down(1350px) {
-          display: none;
-        }
-      }
-
-      .coffe {
-        position: absolute;
-        left: 0;
-        filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
-
-        @include media-down(1350px) {
-          display: none;
-        }
-      }
-
-      .vitamin_b {
-        position: absolute;
-        top: 333px;
-        left: 10px;
-        filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
-        z-index: 2;
-
-        @include media-down(1350px) {
-          display: none;
-        }
-      }
-
-      .taurin {
-        position: absolute;
-        right: 20px;
-        bottom: -22px;
-        filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
-
-        @include media-down(1350px) {
-          display: none;
-        }
-      }
-
-      .text {
-        width: 955px;
-        font-family: 'Yanone Kaffeesatz', sans-serif;
-        color: $white;
-        font-weight: 400;
-        font-size: rem(56);
-        line-height: 66px;
-        position: relative;
-
-        b {
-          font-weight: 700;
-        }
-
-        .smile {
-          position: absolute;
-          top: 58px;
-          right: 19px;
-        }
-
-        .text_description {
-          margin-top: 20px;
-          position: relative;
-
-          .fruits_text {
-            position: absolute;
-            top: 56px;
-            left: 202px;
-            width: 218px;
-          }
-
-          .empty_span {
-            width: 228px;
-            display: inline-block;
-          }
-
-          .last_string {
-            display: flex;
-            position: relative;
-
-            .smile_two {
-              position: absolute;
-              top: -8px;
-            }
-
-            .empty_span {
-              width: 135px;
-            }
-
-            .btn {
-              border-radius: 37px;
-              height: 63px;
-              width: 437px;
-              background: #FDC400;
-              color: $white;
-              cursor: pointer;
-              border: none;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-
-              &:hover {
-                box-sizing: border-box;
-                border: solid 3px #FDC400;
-                background: #EB627E;
-              }
-            }
-          }
-
-        }
-      }
-    }
-  }
-  @keyframes moved {
-    from {
-      left: 400px;
-      //transform: rotate(0deg);
-    }
-    to {
-      left: 880px;
-      //transform: rotate(359deg);
-    }
-  }
-}
-*/

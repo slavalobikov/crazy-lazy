@@ -24,7 +24,7 @@
     width: 15vw;
     height: 8.89vw;
     top: 68vw;
-    left: 0;
+    left: -1.74vw;
     z-index: 5;
   }
 
@@ -68,15 +68,23 @@
     position: absolute;
     left: 36.46vw;
     top: 9.37vw;
-    width: 53.96vw;
-    height: 42.3vw;
+    width: 37.7vw;
+    height: 29.61vw;
     z-index: 4;
     transition: all 0.5s ease-out;
     opacity: 0;
+
+    @include phone-down() {
+      opacity: 1;
+      width: 53.96vw;
+      height: 42.3vw;
+    }
   }
 
   .union_show {
     transition: all 0.5s ease-out;
+    width: 53.96vw;
+    height: 42.3vw;
     opacity: 1;
   }
 

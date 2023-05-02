@@ -70,14 +70,22 @@
     position: absolute;
     left: 9.65vw;
     bottom: 22.57vw;
-    width: 51.6vw;
-    height: 34.02vw;
-    transition: opacity 0.5s ease-out;
+    width: 36.12vw;
+    height: 23.814vw;
+    transition: all 0.5s ease-out;
     opacity: 0;
+
+    @include phone-down() {
+      opacity: 1;
+      width: 51.6vw;
+      height: 34.02vw;
+    }
   }
 
   .union_show {
-    transition: opacity 0.5s ease-out;
+    width: 51.6vw;
+    height: 34.02vw;
+    transition: all 0.5s ease-out;
     opacity: 1;
   }
 
@@ -86,7 +94,7 @@
     height: 20.83vw;
     position: absolute;
     top: -16.11vw;
-    left: 51.18vw;
+    left: 52.18vw;
   }
 
   .lazy_animation {

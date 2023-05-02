@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import classNames from "classnames";
 
-import yellow_bacground from './../../assets/img/yellow_bacground.png';
 import orange_wave from './../../assets/img/orange_wave.png';
 import yellow_bottle from './../../assets/img/yellow_bottle.png';
 import energy_orange from './../../assets/img/energy_orange.png';
@@ -23,20 +22,20 @@ const OrangeBlock = () => {
     return (
         <div className={s.wrapper}>
             <img className={s.orange_wave} src={orange_wave} alt="orange wave"/>
-            <img ref={ref} className={s.yellow_bottle} src={yellow_bottle} alt="личи ананас бутылка"/>
+            <img className={s.yellow_bottle} src={yellow_bottle} alt="личи ананас бутылка"/>
             <img className={s.energy} src={energy_orange} alt="enegry"/>
             <img className={s.pineapple_linchi} src={linchi_pineapple} alt="личи ананас"/>
             <img className={s.berry} src={cirkle} alt="ягода"/>
             <img className={s.yellow_spray} src={yellow_spray} alt="желтая брызга"/>
-            <img className={classNames(s.union, {
-                [s.union_show]: isHover,
+            <img ref={ref} className={classNames(s.union, {
+                [s.union_show]: inView,
             })} src={union_yellow}
                  alt="личи смиотрит на бутылку"/>
             <img
-                onMouseEnter={() => setIsHover(true)}
-                onMouseLeave={() => setIsHover(false)}
+/*                onMouseEnter={() => setIsHover(true)}
+                onMouseLeave={() => setIsHover(false)}*/
                 className={classNames(s.crazy_linch, {
-                [s.linch_show]: isHover,
+                [s.linch_show]: inView,
                 [s.linch_animation]: inView,
             })} src={crazy_kent}
                  alt="crazy линч"/>

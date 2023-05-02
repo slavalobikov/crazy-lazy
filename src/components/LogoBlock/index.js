@@ -3,6 +3,7 @@ import React from 'react';
 import s from './LogoBlock.module.scss';
 import backgroundBlack from './../../assets/img/background_logo_black.png';
 import logo from './../../assets/img/logo.png';
+import logo_pc from './../../assets/img/logo_pc.png';
 import logo_subword from './../../assets/img/logo_subword.png';
 import smile from './../../assets/img/smile.png';
 import fruits_text from './../../assets/img/fruits_text.png';
@@ -17,6 +18,7 @@ const LogoBlock = ({scrollToLich}) => {
         <>
             <div className={s.wrapper_logo}>
                 <img className={s.background_black} src={backgroundBlack} alt="logo"/>
+                <img className={s.logo_pc} src={logo_pc} alt="logo"/>
                 <img className={s.logo} src={logo} alt="crazy lazy energy"/>
                 <img className={s.logo_subword} src={logo_subword} alt="Ты совсем crazy lazy?"/>
             </div>
@@ -63,7 +65,7 @@ const LogoBlock = ({scrollToLich}) => {
                         </span>
                         <span>Еще не успел попробовать?</span><br/>
                         <div className={s.last_string}>
-                            <img className={s.smile_two} src={smile_two} alt="мордочка"/>
+                            <img className={s.smile_two} src={smile_two} alt="мордочка"/> 
                             Ты совсем <b> Crazy Lazy</b>? → <br/>
                             Зацени эти вкусы!
                         </div>

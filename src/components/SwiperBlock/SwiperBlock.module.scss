@@ -35,7 +35,7 @@
     &:hover {
       .text {
         transition: all 0.2s ease-out;
-        color: #FFFFFF;
+        //color: #FFFFFF;
       }
     }
 
@@ -82,7 +82,7 @@
       left: 50%;
       top: 47%;
       transform: translate(-50%, -50%);
-      width: 11.875vw;
+      width: 16vw;
       font-family: 'Yanone Kaffeesatz';
       font-style: normal;
       font-weight: 500;
@@ -195,6 +195,11 @@
     animation-fill-mode: forwards;
   }
 
+  .union_scale {
+    animation: scale_animation 0.2s ease-out;
+    animation-fill-mode: forwards;
+  }
+
   @keyframes endFirst {
     from {
       //right: 12.361vw;
@@ -211,6 +216,14 @@
     }
     to {
       left: 35.833vw;
+    }
+  }
+  @keyframes scale_animation {
+    from {
+      transform: scale(0.7);
+    }
+    to {
+      transform: scale(1);
     }
   }
 }

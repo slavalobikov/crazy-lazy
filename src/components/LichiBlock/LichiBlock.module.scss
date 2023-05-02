@@ -43,13 +43,21 @@
   .union_pink {
     position: absolute;
     left: 6.3vw;
-    width: 52.6vw;
-    height: 30.5vw;
+    width: 36.82vw;
+    height: 21.35vw;
     opacity: 0;
     transition: all 0.5s ease-out;
+
+    @include phone-down() {
+      opacity: 1;
+      width: 52.6vw;
+      height: 30.5vw;
+    }
   }
 
   .union_pink_show {
+    width: 52.6vw;
+    height: 30.5vw;
     opacity: 1;
     display: block;
   }

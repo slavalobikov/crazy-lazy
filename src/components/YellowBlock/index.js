@@ -29,10 +29,10 @@ const YellowBlock = () => {
             <img className={s.melon_half} src={melon_half} alt="дыня"/>
             <img className={s.melon_2} src={melon} alt="дыня"/>
             <img
-                onMouseEnter={() => setIsHover(true)}
-                onMouseLeave={() => setIsHover(false)}
+/*                onMouseEnter={() => setIsHover(true)}
+                onMouseLeave={() => setIsHover(false)}*/
                 className={classNames(s.lazy_people, {
-                    [s.lazy_show]: isHover,
+                    [s.lazy_show]: inView,
                     [s.lazy_animation]: inView,
                 })}
                 src={lazy_orange_people}
@@ -40,7 +40,7 @@ const YellowBlock = () => {
             />
             <img className={s.melon_text} src={melon_and_chizecake} alt="дыня и чизкейк"/>
             <img className={classNames(s.union_eat, {
-                [s.union_show]: isHover,
+                [s.union_show]: inView,
                 [s.union_animation]: inView,
             })} src={union_eat} alt="мысли лейзи"/>
             <img className={s.cofe} src={cofe_green} alt="кофеин"/>

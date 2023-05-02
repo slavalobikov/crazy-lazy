@@ -12,9 +12,14 @@ import fruit_mobile from './../../assets/img/fruit_mobile.png';
 import fruit_mobile_left_for_mobile from './../../assets/img/fruit_mobile_left_for_mobile.png';
 import s from './MobileBlock.module.scss';
 import classNames from "classnames";
+import {useInView} from "react-intersection-observer";
 
 const MobileBlock = ({isMobileBlockShow, refMobileBlock}) => {
-    const [isHover, setIsHover] = useState(false);
+    const [isHover, setIsHover] = useState(true);
+    const { ref, inView } = useInView({
+        threshold: 0.5,
+        triggerOnce: true,
+    });
     return (
         <div ref={refMobileBlock} className={classNames(s.block, {
             [s.show_block]:isMobileBlockShow}
@@ -34,14 +39,14 @@ const MobileBlock = ({isMobileBlockShow, refMobileBlock}) => {
             <img className={s.fruit_mobile_left} src={fruit_mobile_left} alt="мобильник"/>
             <img className={s.fruilt_mobile_left_for_mobile} src={fruit_mobile_left_for_mobile} alt="фрукты"/>
             <img
-                onMouseEnter={() => setIsHover(true)}
-                onMouseLeave={() => setIsHover(false)}
+/*                onMouseEnter={() => setIsHover(true)}
+                onMouseLeave={() => setIsHover(false)}*/
                 className={s.people} src={crazy_mobile_block}
                 alt="крейзи"
             />
-            <img className={classNames(s.union, {[s.union_show]: isHover})} src={union_mobile_block}
+            <img ref={ref} className={classNames(s.union, {[s.union_show]: inView})} src={union_mobile_block}
                  alt="мысли крейзи"/>
-            <div className={classNames(s.union_text, {[s.union_text_show]: isHover})}>да ты крейзи!</div>
+            <div className={classNames(s.union_text, {[s.union_text_show]: inView})}>да ты крейзи!</div>
         </div>
     )
 }

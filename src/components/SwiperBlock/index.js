@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import classNames from "classnames";
 
 import button_yellow from './../../assets/img/button_yellow.png';
 import button_white from './../../assets/img/button_white.png';
@@ -14,19 +15,16 @@ import crazy_4_union from './../../assets/img/crazy_4_union.png';
 import lazy_show_table from './../../assets/img/lazy_show_table.png';
 
 import s from './SwiperBlock.module.scss';
-import classNames from "classnames";
 
 const SwiperBlock = ({clickToSecretButton}) => {
-    const [isHover, setIsHover] = useState(false);
+    const [isHover, setIsHover] = useState(true);
     const [count, setCount] = useState(0);
-    const [countPrev, setCountPrev] = useState(null);
 
     const nextSlide = () => {
         if (count === 3) {
             return setCount(0)
         }
-        setCountPrev(count);
-        setCount(prev => prev + 1)
+        setCount(prev => prev + 1);
     }
 
     return (
@@ -39,15 +37,14 @@ const SwiperBlock = ({clickToSecretButton}) => {
             })} src={crazy} alt="крези смотрит на кнопку"/>
             {(count === 0) && <>
                 <img
-                    onMouseLeave={() => setIsHover(false)}
-                    onMouseEnter={() => setIsHover(true)}
-                    className={classNames(s.lazy_show,)}
+                    className={classNames(s.lazy_show)}
                     src={lazy_show_table}
                     alt="лейзи показывает таблицу crazy-lazy energy"
                 />
                 <img
                     className={classNames(s.crazy_union, {
                         [s.union_show]: isHover,
+                        [s.union_scale]: count === 0,
                     })}
                     src={crazy_show_union}
                     alt="Пробуй максимум понемножку!
@@ -56,8 +53,6 @@ const SwiperBlock = ({clickToSecretButton}) => {
             </>}
             {count === 1 && <>
                 <img
-                    onMouseEnter={() => setIsHover(true)}
-                    onMouseLeave={() => setIsHover(false)}
                     className={classNames(s.crazy_2, {
                         [s.animation_start]: count === 1,
                     })}
@@ -68,6 +63,7 @@ const SwiperBlock = ({clickToSecretButton}) => {
                 <img
                     className={classNames(s.crazy_2_union, {
                         [s.union_show]: isHover,
+                        [s.union_scale]: count === 1,
                     })}
                     src={crazy_union_2}
                     alt="Быть одному можно только вместе! Всегда держи рядом друга! Вместе кринж не такой кринжовый,
@@ -76,17 +72,15 @@ const SwiperBlock = ({clickToSecretButton}) => {
             </>}
             {count === 2 && <>
                 <img
-                    onMouseEnter={() => setIsHover(true)}
-                    onMouseLeave={() => setIsHover(false)}
                     className={classNames(s.crazy_3, {
                         [s.animation_start]: count === 2
-
                     })}
                     src={crazy_3}
                     alt="крейзи жанглируешь грушами"
                 />
                 <img className={classNames(s.crazy_2_union, {
-                    [s.union_show]: isHover
+                    [s.union_show]: isHover,
+                    [s.union_scale]: count === 2,
                 })} src={crazy_3_union}
                      alt="Скучно веселись или весело скучай! Кто сказал, что всегда нужно быть на
                  подъеме. Иногда ты Lazy, а иногда Crazy."
@@ -94,8 +88,6 @@ const SwiperBlock = ({clickToSecretButton}) => {
             </>}
             {count === 3 && <>
                 <img
-                    onMouseEnter={() => setIsHover(true)}
-                    onMouseLeave={() => setIsHover(false)}
                     className={classNames(s.crazy_4, {
                         [s.animation_start]: count === 3
                     })}
@@ -104,7 +96,8 @@ const SwiperBlock = ({clickToSecretButton}) => {
                 />
                 <img
                     className={classNames(s.crazy_2_union, {
-                        [s.union_show]: isHover
+                        [s.union_show]: isHover,
+                        [s.union_scale]: count === 3,
                     })}
                     src={crazy_4_union}
                     alt="Не слушай эти советы, если не хочешь! А делай как хочешь."
