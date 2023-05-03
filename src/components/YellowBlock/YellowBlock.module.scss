@@ -5,13 +5,32 @@
   margin-top: -2px;
   height: 39.4vw;
   position: relative;
+  overflow-x: clip;
 
   .bottle {
     position: absolute;
     top: -29.65vw;
-    right: 0.97vw;
+    right: -2.97vw;
     width: 29.17vw;
     height: 63.89vw;
+    display: block;
+
+    @include phone-down() {
+      display: none;
+    }
+  }
+
+  .bottle_mobile {
+    display: none;
+    position: absolute;
+    top: -29.65vw;
+    right: -1.97vw;
+    width: 29.17vw;
+    height: 59.89vw;
+
+    @include phone-down() {
+      display: block;
+    }
   }
 
   .spray_left {
@@ -37,14 +56,15 @@
   .lazy_people {
     cursor: pointer;
     position: absolute;
-    right: 26.67vw;
+    bottom: 2.29vw;
+    right: 23.67vw;
     width: 31.39vw;
     height: 28.4vw;
   }
 
   .melon_text {
     position: absolute;
-    bottom: 1.32vw;
+    bottom: 3.32vw;
     left: 11.6vw;
     width: 26.8vw;
     height: 16.25vw;
@@ -53,14 +73,14 @@
   .melon_2 {
     position: absolute;
     left: 5.14vw;
-    bottom: 11.74vw;
+    bottom: 13.74vw;
     width: 10.97vw;
     height: 7.43vw;
   }
 
   .melon_half {
     position: absolute;
-    bottom: 15.49vw;
+    bottom: 17.49vw;
     left: 0;
     width: 10.9vw;
     height: 11.67vw;
@@ -98,13 +118,13 @@
   }
 
   .lazy_animation {
-    animation: up 3s ease-out;
-    animation-fill-mode: forwards;
+/*    animation: up 3s ease-out;
+    animation-fill-mode: forwards;*/
   }
 
   .union_animation {
-    animation: upUnion 3s ease-out;
-    animation-fill-mode: forwards;
+/*    animation: upUnion 3s ease-out;
+    animation-fill-mode: forwards;*/
   }
 
   @keyframes up {

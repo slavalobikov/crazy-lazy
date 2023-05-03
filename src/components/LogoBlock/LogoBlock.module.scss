@@ -61,13 +61,13 @@
     position: absolute;
     right: 0;
     top: 2.99vw;
-    width: 14.86vw;
+    width: 12.86vw;
     height: 8.06vw;
 
     @include laptop-down() {
       display: block;
       top: 14.72vw;
-      width: 16.67vw;
+      width: 13.67vw;
       height: 8.89vw;
     }
   }

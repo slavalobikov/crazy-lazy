@@ -32,8 +32,6 @@ const OrangeBlock = () => {
             })} src={union_yellow}
                  alt="личи смиотрит на бутылку"/>
             <img
-/*                onMouseEnter={() => setIsHover(true)}
-                onMouseLeave={() => setIsHover(false)}*/
                 className={classNames(s.crazy_linch, {
                 [s.linch_show]: inView,
                 [s.linch_animation]: inView,

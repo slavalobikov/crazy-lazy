@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import classNames from "classnames";
 
 import bottle from './../../assets/img/orange_bottle.png';
+import bottle_mobile from './../../assets/img/yellow_bottle_mobile.png';
 import orange_spray_right from './../../assets/img/orange_spray_right.png';
 import orange_spray_left from './../../assets/img/orange_spray_left.png';
 import lazy_orange_people from './../../assets/img/lazy_orange_people.png';
@@ -16,21 +17,21 @@ import {useInView} from "react-intersection-observer";
 
 const YellowBlock = () => {
     const { ref, inView } = useInView({
-        threshold: 0.5,
+        threshold: 0,
         triggerOnce: true,
     });
     const [isHover, setIsHover] = useState(false);
 
     return <>
         <div className={s.wrapper}>
-            <img ref={ref} className={s.bottle} src={bottle} alt="crazy lazy energy бутылка с дыней и чизкейком"/>
+            <img className={s.bottle} src={bottle} alt="crazy lazy energy бутылка с дыней и чизкейком"/>
+            <img className={s.bottle_mobile} src={bottle_mobile} alt="crazy lazy energy бутылка с дыней и чизкейком"/>
             <img className={s.spray_left} src={orange_spray_left} alt="брызга"/>
             <img className={s.spray_right} src={orange_spray_right} alt="брызга"/>
             <img className={s.melon_half} src={melon_half} alt="дыня"/>
             <img className={s.melon_2} src={melon} alt="дыня"/>
             <img
-/*                onMouseEnter={() => setIsHover(true)}
-                onMouseLeave={() => setIsHover(false)}*/
+                ref={ref}
                 className={classNames(s.lazy_people, {
                     [s.lazy_show]: inView,
                     [s.lazy_animation]: inView,

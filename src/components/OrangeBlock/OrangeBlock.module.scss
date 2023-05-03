@@ -31,7 +31,7 @@
   .pineapple_linchi {
     position: absolute;
     bottom: 25vw;
-    left: 46.53vw;
+    left: 42.53vw;
     width: 28vw;
     height: 16.67vw;
     z-index: 5;
@@ -49,8 +49,8 @@
     width: 25.2vw;
     height: 39.24vw;
     position: absolute;
+    bottom: 25.81vw;
     left: 19.74vw;
-    bottom: 10vw;
     cursor: pointer;
     z-index: 5;
   }
@@ -89,8 +89,8 @@
   }
 
   .linch_animation {
-    animation: up 4s ease-out;
-    animation-fill-mode: forwards;
+/*    animation: up 4s ease-out;
+    animation-fill-mode: forwards;*/
   }
 }
 

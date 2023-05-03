@@ -23,12 +23,11 @@ const LichiBlock = ({refLich}) => {
         <div className={s.wrapper} ref={refLich}>
             <img className={s.background} src={linch_yellow_background} alt="background"/>
             <img className={s.vitamin_b} src={vitamin_b_green} alt="витамин B"/>
-            <img ref={ref} className={s.pink_bottle} src={pink_bottle} alt="бутылка crazy energy"/>
+            <img className={s.pink_bottle} src={pink_bottle} alt="бутылка crazy energy"/>
             <img
                 className={s.watermelon_text} src={watermelon_text} alt="Арбуз кумкват конопля"/>
             <img
-/*                onMouseEnter={() => setIsPinkLichiHover(true)}
-                onMouseLeave={() => setIsPinkLichiHover(false)}*/
+                ref={ref}
                 className={classNames(s.lazyPeople, {
                     [s.lazy_people_animation]: inView,
                     [s.lazy_people_hover]: isPinkLichiHover,

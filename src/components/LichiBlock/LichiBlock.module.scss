@@ -29,6 +29,7 @@
   .lazyPeople {
     position: absolute;
     left: 2.3vw;
+    bottom: 13.2vw;
     width: 25vw;
     height: 31.5vw;
     cursor: pointer;
@@ -36,13 +37,14 @@
   }
 
   .lazy_people_animation {
-    animation: up 3s ease-out;
-    animation-fill-mode: forwards;
+/*    animation: up 3s ease-out;
+    animation-fill-mode: forwards;*/
   }
 
   .union_pink {
     position: absolute;
     left: 6.3vw;
+    bottom: 41.5vw;
     width: 36.82vw;
     height: 21.35vw;
     opacity: 0;
@@ -63,8 +65,8 @@
   }
 
   .union_animation {
-    animation: upUnion 3s ease-out;
-    animation-fill-mode: forwards;
+/*    animation: upUnion 3s ease-out;
+    animation-fill-mode: forwards;*/
   }
 
   .vitamin_b {

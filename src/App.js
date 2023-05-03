@@ -33,7 +33,9 @@ function App() {
             <LichiBlock refLich={refBlockLich}/>
             <OrangeBlock/>
             <YellowBlock/>
+{/*
             <div className={s.black_line}/>
+*/}
             <SwiperBlock clickToSecretButton={clickToSecretButton}/>
             <div className={s.black_line}/>
             <MobileBlock refMobileBlock={refMobileBlock} isMobileBlockShow={isMobileBlockShow}/>

@@ -157,6 +157,32 @@
     transition: all 0.5s ease-out;
   }
 
+  .points {
+    position: absolute;
+    height: 1.39vw;
+    width: 9.03vw;
+    left: 50%;
+    bottom: 27.29vw;
+    transform: translate(-50%, 0);
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .point {
+      cursor: pointer;
+      width: 1.39vw;
+      height: 1.39vw;
+      border-radius: 50%;
+      background: #FFFFFF;
+      border: solid 0.21vw #000000;
+    }
+
+    .active_point {
+      background: #F3CC00;
+    }
+  }
+
   .crazy_3 {
     width: 29.93vw;
     height: 43.056vw;
@@ -221,9 +247,11 @@
   @keyframes scale_animation {
     from {
       transform: scale(0.7);
+      opacity: 0;
     }
     to {
       transform: scale(1);
+      opacity: 1;
     }
   }
 }
