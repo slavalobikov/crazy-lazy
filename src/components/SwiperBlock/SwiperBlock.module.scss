@@ -33,10 +33,7 @@
     }
 
     &:hover {
-      .text {
-        transition: all 0.2s ease-out;
-        //color: #FFFFFF;
-      }
+
     }
 
     .text {
@@ -44,6 +41,7 @@
       pointer-events: none;
       top: 50%;
       left: 50%;
+      color: #000000;
       transform: translate(-50%, -50%);
       transition: all 0.2s ease-out;
       font-family: 'Yanone Kaffeesatz';
