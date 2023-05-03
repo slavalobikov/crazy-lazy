@@ -145,6 +145,7 @@
     bottom: 4.097vw;
     width: 34.72vw;
     height: 35.9vw;
+    z-index: 2;
   }
 
   .crazy_2_union {
@@ -164,7 +165,7 @@
     left: 50%;
     bottom: 27.29vw;
     transform: translate(-50%, 0);
-    z-index: 5;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -190,6 +191,7 @@
     bottom: 3.125vw;
     left: 37.71vw;
     cursor: pointer;
+    z-index: 3;
   }
 
   .crazy_4 {
@@ -199,6 +201,7 @@
     left: 38.33vw;
     bottom: 2.85vw;
     cursor: pointer;
+    z-index: 3;
   }
 
   .union_show {
@@ -228,7 +231,6 @@
 
   @keyframes endFirst {
     from {
-      //right: 12.361vw;
       left: 51.042vw;
     }
     to {
