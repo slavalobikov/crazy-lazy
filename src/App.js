@@ -32,11 +32,8 @@ function App() {
             <div className={s.black_line}/>
             <LichiBlock refLich={refBlockLich}/>
             <OrangeBlock/>
-
-{/*
-
             <YellowBlock/>
-*/}
+
 
 {/*
             <div className={s.black_line}/>

@@ -11,6 +11,11 @@
     height: vwPC(1093.48);
     margin-top: vwPC(-241.48);
     display: block;
+    z-index: 1;
+
+    @include phone-down() {
+      z-index: 0;
+    }
 
     @include phone-down() {
       display: none;
@@ -81,12 +86,14 @@
     height: vwPC(83.39);
     right: vwPC(163.52);
     bottom: vwPC(300.08);
+    z-index: 1;
 
     @include phone-down() {
       width: vwMB(23.59);
       height: vwMB(27.14);
       right: vwMB(12);
       bottom: vwMB(115);
+      z-index: 0;
     }
   }
 
@@ -115,7 +122,7 @@
     width: vwPC(221.73);
     height: vwPC(221.73);
     transform: rotate(17.43deg);
-
+    z-index: 1;
 
     @include phone-down() {
       display: none;
@@ -202,12 +209,14 @@
     bottom: vwPC(89.35);
     width: vwPC(118.32);
     height: vwPC(95.02);
+    z-index: 1;
 
     @include phone-down() {
       width: vwMB(30.12);
       height: vwMB(30.61);
       left: vwMB(24);
       bottom: vwMB(29);
+      z-index: 0;
     }
   }
 }
