@@ -1,11 +1,11 @@
 @import "src/style/common";
 
 .black_line {
-  height: 2.083vw;
+  height: vwPC(15);
   background: #000000;
 
   @include phone-down() {
-    height: 2.778vw;
+    height: vwMB(10);
   }
 }
 

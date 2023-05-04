@@ -5,11 +5,11 @@
   position: relative;
 
   .background_black {
-    width: 100vw;
-    height: 60vw;
+    width: vwPC(1440);
+    height: vwPC(792);
 
     @include phone-down() {
-      height: 85vw;
+      height: vwMB(306);
     }
   }
 
@@ -27,10 +27,10 @@
   .logo_pc {
     display: block;
     position: absolute;
-    top:0;
+    top: vwPC(-20);
     left: 0;
-    width: 92.5vw;
-    height: 43.61vw;
+    width: vwPC(1332);
+    height: vwPC(628);
 
     @include phone-down() {
       display: none;
@@ -53,79 +53,82 @@
 
 .wrapper_pink {
   background: $pink;
-  padding-top: 15px;
+  padding-top: vwPC(82);
   position: relative;
-  margin-top: -2px;
+  margin-top: vwPC(-2);
+
+  @include phone-down() {
+    padding-top: vwMB(12);
+  }
 
   .energy {
     position: absolute;
     right: 0;
-    top: 2.99vw;
+    top: vwPC(210);
     width: 10.9vw;
     height: 8.06vw;
 
     @include laptop-down() {
       display: block;
-      top: 14.72vw;
-      width: 10.9vw;
-      height: 8.89vw;
+      width: vwMB(52);
+      height: vwMB(37);
+      top: vwMB(54);
+      right: 0;
     }
   }
 
   .vitamin_b {
     position: absolute;
-    width: 14.24vw;
-    height: 14.24vw;
-    left: 1.39vw;
-    bottom: 0;
-    transform: translate(0, 50%) rotate(-16.28deg);
+    width: vwPC(205);
+    height: vwPC(205);
+    left: vwPC(20);
+    bottom: vwPC(-17);
+    transform: rotate(-16.28deg);
     z-index: 7;
 
     @include laptop-down() {
       display: block;
-      width: 18.056vw;
-      height: 18.056vw;
-      left: 2.78vw;
+      width: vwMB(65.5);
+      height: vwMB(65.5);
+      bottom: vwMB(-2);
+      left: 2vw;
       transform: translate(0, 10%) rotate(-16.28deg);
     }
   }
 
   .taurin {
-    width: 10.83vw;
-    height: 10.83vw;
+    width: vwPC(156);
+    height: vwPC(156);
     position: absolute;
-    bottom: 0;
-    right: 1.18vw;
+    top: vwPC(463);
+    z-index: 5;
+    right: vwPC(30);
     transform: translate(0, 13%) rotate(5.33deg);
 
     @include laptop-down() {
       display: block;
-      width: 13.33vw;
-      height: 13.33vw;
-      bottom: 8.89vw;
-      right: 9.72vw;
+      width: vwMB(48);
+      height: vwMB(48);
+      right: vwMB(36);
+      top: vwMB(142);
     }
   }
 
   .coffe {
     position: absolute;
-    width: 11.6vw;
-    height: 11.6vw;
-    top: 98px;
-    left: 15px;
+    width: vwPC(166.5);
+    height: vwPC(166.5);
+    top: vwPC(115);
+    left: vwPC(-40);
     filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
     transform: rotate(60.95deg);
 
-    @include media-down(1375px) {
-      display: none;
-    }
-
     @include laptop-down() {
       display: block;
-      top: 17.22vw;
+      top: vwMB(74);
       left: -4.17vw;
-      width: 16.67vw;
-      height: 16.67vw;
+      width: vwMB(59.63);
+      height: vwMB(59.63);
     }
   }
 
@@ -133,14 +136,14 @@
     display: block;
     margin: 0 auto;
     background: $pink;
-    width: 67.71vw;
+    width: vwPC(975);
     font-family: 'Yanone Kaffeesatz', sans-serif;
     color: $white;
     font-weight: 400;
     font-size: 4.03vw;
     line-height: 4.58vw;
     position: relative;
-    padding-bottom: 4.17vw;
+    padding-bottom: vwPC(124);
 
     @include laptop-down() {
       display: none;
@@ -152,24 +155,27 @@
     }
 
     .smile {
-      display: inline-block;
       width: 6.46vw;
       height: 4.31vw;
+      position: absolute;
+      position: absolute;
+      right: vwPC(15);
+      top: vwPC(60);
     }
 
     .text_description {
-      margin-top: 1.39vw;
+      margin-top: 2.5vw;
       position: relative;
 
       .fruits_text {
         position: absolute;
         top: 3.89vw;
-        left: 14.03vw;
+        left: 14.53vw;
         width: 15.14vw;
       }
 
       .empty_span {
-        width: 15.83vw;
+        width: 16.83vw;
         display: inline-block;
       }
 
@@ -224,7 +230,6 @@
     font-family: 'Yanone Kaffeesatz';
     font-style: normal;
     font-weight: 400;
-    //font-size: 16px;
     font-size: 4.44vw;
     line-height: 5vw;
     width: 56.94vw;
@@ -248,9 +253,13 @@
       margin-top: 5.56vw;
       position: relative;
 
+      @include phone-down() {
+        margin-top: 2vw;
+      }
+
       .fruits_text {
         display: inline-block;
-        width: 15vw;
+        width: 17vw;
         height: 4.44vw;
       }
 
@@ -262,13 +271,16 @@
       .last_string {
         margin-top: 5.56vw;
 
+        @include phone-down() {
+          margin-top: 2.5vw;
+        }
+
         .smile_two {
           display: inline-block;
-          width: 13.06vw;
-          height: 3.89vw;
+          width: vwMB(47);
+          height: vwMB(19);
         }
       }
     }
   }
-
 }
