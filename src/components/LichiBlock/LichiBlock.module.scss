@@ -4,6 +4,8 @@
   background: $orange;
   position: relative;
   z-index: 4;
+  overflow-x: clip;
+
 
   .background {
     width: vwPC(1440);
@@ -81,10 +83,6 @@
 
     @include phone-down() {
       display: none;
-      //this
-/*      opacity: 1;
-      width: 52.6vw;
-      height: 30.5vw;*/
     }
   }
 
