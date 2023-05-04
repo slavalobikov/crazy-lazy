@@ -1,39 +1,57 @@
 @import "src/style/common";
 
 .swiper_block {
-  height: 78vw;
+  height: vwPC(771);
   background: $pink;
   scroll-snap-align: start;
-  padding-top: 3.8194vw;
+  padding-top: vwPC(62);
   position: relative;
   overflow-x: clip;
+
+  @include phone-down() {
+    height: vwMB(281);
+    padding-top: vwMB(19);
+  }
 
   .video_block {
     margin-left: auto;
     margin-right: auto;
-    width: 77.083vw;
-    height: 42.194vw;
+    width: vwPC(813);
+    height: vwPC(455);
     background: #BCB7B7;
-    border: 0.2083vw solid #000000;
-    border-radius: 4.375vw;
+    border: vwPC(3) solid #000000;
+    border-radius: vwPC(63);
+
+    @include phone-down() {
+      width: vwMB(259);
+      height: vwMB(145);
+      border-radius: vwMB(17);
+      border: vwMB(1) solid #000000;
+    }
   }
 
   .button_yellow {
-    margin-top: 3.1944vw;
-    margin-left: 11.0417vw;
+    margin-top: vwPC(22);
+    margin-left: vwPC(313);
     position: relative;
     cursor: pointer;
     background: transparent;
     border: none;
     display: block;
 
-    img {
-      width: 17.57vw;
-      height: 8.9583vw;
+    @include phone-down() {
+      margin-top: vwMB(16.91);
+      margin-left: vwMB(50.32);
     }
 
-    &:hover {
+    img {
+      width: vwPC(165.86);
+      height: vwPC(84.57);
 
+      @include phone-down() {
+        width: vwMB(63.25);
+        height: vwMB(32.28);
+      }
     }
 
     .text {
@@ -47,9 +65,14 @@
       font-family: 'Yanone Kaffeesatz';
       font-style: normal;
       font-weight: 400;
-      font-size: 6.25vw;
-      line-height: 6.1806vw;
+      font-size: vwPC(65);
+      line-height: vwPC(65);
       text-align: center;
+
+      @include phone-down() {
+        font-size: vwMB(20);
+        line-height: vwMB(20);
+      }
     }
   }
 
@@ -58,18 +81,21 @@
     background: transparent;
     border: none;
     cursor: pointer;
-    margin-left: 11.0417vw;
-    margin-top: 1.042vw;
+    margin-left: vwPC(313);
+    margin-top: vwPC(9.43);
 
-    img {
-      width: 17.57vw;
-      height: 8.9583vw;
+    @include phone-down() {
+      margin-left: vwMB(50.32);
+      margin-top: vwMB(3.5);
     }
 
-    &:hover {
-      .text {
-        transition: all 0.2s ease-out;
-        color: #000000;
+    img {
+      width: vwPC(165.86);
+      height: vwPC(84.57);
+
+      @include phone-down() {
+        width: vwMB(63.25);
+        height: vwMB(32.28);
       }
     }
 
@@ -84,97 +110,187 @@
       font-family: 'Yanone Kaffeesatz';
       font-style: normal;
       font-weight: 500;
-      font-size: 2.9861vw;
-      line-height: 3.0556vw;
+      font-size: vwPC(28);
+      line-height: vwPC(30);
       text-align: center;
       text-transform: uppercase;
       color: #EB627E;
+
+      @include phone-down() {
+        font-size: vwMB(11);
+        line-height: vwMB(12);
+      }
     }
   }
 
   .pears {
     pointer-events: none;
     position: absolute;
-    left: 2.222vw;
+    left: vwPC(226);
     z-index: 2;
-    bottom: 14.0278vw;
-    width: 14.0278vw;
-    height: 27.9167vw;
+    bottom: vwPC(94);
+    width: vwPC(132);
+    height: vwPC(264);
     transition: all 0.5s ease-out;
     opacity: 0;
+    display: block;
+
+    @include phone-down() {
+      display: none;
+    }
+  }
+
+  .pears_mobile {
+    display: none;
+
+    @include phone-down() {
+      display: block;
+      position: absolute;
+      width: vwMB(50.5);
+      height: vwMB(100.59);
+      left: vwMB(23);
+      z-index: 2;
+      bottom: vwMB(50.55);
+      transition: all 0.5s ease-out;
+      opacity: 0;
+    }
   }
 
   .crazy {
     pointer-events: none;
-    width: 22.222vw;
-    height: 34.583vw;
+    width: vwPC(226);
+    height: vwPC(351);
     position: absolute;
-    bottom: 4.93056vw;
-    left: 21.7361vw;
+    bottom: vwPC(10);
+    left: vwPC(396);
     z-index: 5;
     transition: all 0.5s ease-out;
     opacity: 0;
+
+    @include phone-down() {
+      width: vwMB(80);
+      height: vwMB(124.61);
+      left: vwMB(93);
+      bottom: vwMB(16.01);
+    }
   }
 
   .lazy_show {
-    width: 36.597vw;
-    height: 25.208vw;
+    width: vwPC(328);
+    height: vwPC(226);
     position: absolute;
-    bottom: 4.444vw;
-    right: 12.361vw;
+    bottom: vwPC(81);
+    right: vwPC(226);
     cursor: pointer;
     z-index: 2;
+
+    @include phone-down() {
+      width: vwMB(131.75);
+      height: vwMB(90.83);
+      left: vwMB(190);
+      bottom: vwMB(16);
+    }
   }
 
   .crazy_union {
-    width: 30.611vw;
-    height: 21.597vw;
+    width: vwPC(415.29);
+    height: vwPC(293);
     position: absolute;
-    right: 6.542vw;
-    bottom: 21.736vw;
+    right: vwPC(44.71);
+    bottom: vwPC(226);
     transition: all 0.5s ease-out;
     opacity: 0;
+
+    @include phone-down() {
+      width: vwMB(123);
+      height: vwMB(86.95);
+      left: vwMB(230);
+      bottom: vwMB(77.06);
+    }
+  }
+
+  .crazy_union_mobile {
+    display: none;
+
+    @include phone-down() {
+      position: absolute;
+      display: block;
+      width: vwMB(123);
+      height: vwMB(86.94);
+      right: vwMB(12);
+      bottom: vwMB(85.06);
+      transition: all 0.5s ease-out;
+    }
   }
 
   .crazy_2 {
     cursor: pointer;
     position: absolute;
-    left: 35.833vw;
-    bottom: 4.097vw;
-    width: 34.72vw;
-    height: 35.9vw;
+    left: vwPC(829);
+    bottom: vwPC(26);
+    width: vwPC(322);
+    height: vwPC(334);
     z-index: 2;
+
+    @include phone-down() {
+      width: vwMB(110);
+      height: vwMB(115);
+      left: vwMB(182);
+      bottom: vwMB(10);
+    }
   }
 
   .crazy_2_union {
-    width: 30.611vw;
-    height: 21.597vw;
+    width: vwPC(415.29);
+    height: vwPC(293);
     position: absolute;
-    bottom: 22.847vw;
-    right: 6.542vw;
+    bottom: vwPC(226);
+    right: vwPC(44.71);
     opacity: 0;
     transition: all 0.5s ease-out;
+    display: block;
+
+    @include phone-down() {
+      display: none;
+      width: vwMB(123);
+      height: vwMB(86.94);
+      right: vwMB(12);
+      bottom: vwMB(85.06);
+    }
   }
 
   .points {
     position: absolute;
-    height: 1.39vw;
-    width: 9.03vw;
+    height: vwPC(16.56);
+    width: vwPC(117.25);
     left: 50%;
-    bottom: 27.29vw;
+    bottom: vwPC(209.44);
     transform: translate(-50%, 0);
     z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    @include phone-down() {
+      width: vwMB(34);
+      height: vwMB(5.31);
+      bottom: vwMB(99.69);
+    }
+
     .point {
       cursor: pointer;
-      width: 1.39vw;
-      height: 1.39vw;
+      width: vwPC(16.56);
+      height: vwPC(16.56);
       border-radius: 50%;
       background: #FFFFFF;
-      border: solid 0.21vw #000000;
+      border: solid vwPC(3) #000000;
+
+      @include phone-down() {
+        width: vwMB(5.31);
+        height: vwMB(5.31);
+        border: vwMB(1) solid #000000;
+        transform: matrix(1, 0, 0, -1, 0, 0);
+      }
     }
 
     .active_point {
@@ -183,23 +299,37 @@
   }
 
   .crazy_3 {
-    width: 29.93vw;
-    height: 43.056vw;
+    width: vwPC(290);
+    height: vwPC(417);
     position: absolute;
-    bottom: 3.125vw;
-    left: 37.71vw;
+    bottom: vwPC(26);
+    left: vwPC(826);
     cursor: pointer;
     z-index: 3;
+
+    @include phone-down() {
+      width: vwMB(97);
+      height: vwMB(139);
+      left: vwMB(183);
+      bottom: vwMB(20);
+    }
   }
 
   .crazy_4 {
-    width: 36.18vw;
-    height: 38.89vw;
+    width: vwPC(314);
+    height: vwPC(338);
     position: absolute;
-    left: 38.33vw;
-    bottom: 2.85vw;
+    left: vwPC(812);
+    bottom: vwPC(34);
     cursor: pointer;
     z-index: 3;
+
+    @include phone-down() {
+      width: vwMB(107);
+      height: vwMB(115);
+      left: vwMB(185);
+      bottom: vwMB(23);
+    }
   }
 
   .union_show {
@@ -213,7 +343,7 @@
   }
 
   .animation_start {
-      animation: start 0.2s ease-out;
+      animation: start 0.3s ease-out;
       animation-fill-mode: forwards;
   }
 
@@ -239,9 +369,6 @@
   @keyframes start {
     from {
       left: 29.33vw;
-    }
-    to {
-      left: 35.833vw;
     }
   }
   @keyframes scale_animation {

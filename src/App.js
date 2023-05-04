@@ -33,11 +33,7 @@ function App() {
             <LichiBlock refLich={refBlockLich}/>
             <OrangeBlock/>
             <YellowBlock/>
-
-
-{/*
-            <div className={s.black_line}/>
-*/}
+            <div className={s.black_line_subvideo}/>
             <SwiperBlock clickToSecretButton={clickToSecretButton}/>
             <div className={s.black_line}/>
             <MobileBlock refMobileBlock={refMobileBlock} isMobileBlockShow={isMobileBlockShow}/>
