@@ -1,7 +1,7 @@
 @import 'src/style/common';
 
 .block {
-  height: 68.75vw;
+  height: vwPC(735);
   background: $orange;
   position: relative;
   display: none;
@@ -10,6 +10,62 @@
     display: block;
     height: 151.667vw;
     overflow-x: clip;
+  }
+
+  .video_placeholder {
+    position: absolute;
+    top: vwPC(187);
+    background: #FFFFFF;
+    transform: translate(-50%, 0) rotate(90deg);
+    left: 50%;
+    width: vwPC(615);
+    height: vwPC(334);
+    border-radius: vwPC(31);
+    z-index: 0;
+
+    @include phone-down() {
+      display: none;
+    }
+  }
+
+  .crazy {
+    display: none;
+
+    @include phone-down() {
+      display: block;
+      width: vwMB(107);
+      height: vwMB(189);
+      position: absolute;
+      left: vwMB(4);
+      bottom: vwMB(9);
+    }
+  }
+
+
+  .mobile_block_right {
+    position: absolute;
+    width: vwPC(473.69);
+    height: vwPC(638.59);
+    right: vwPC(58.31);
+    top: vwPC(71);
+    display: block;
+
+    @include phone-down() {
+      display: none;
+    }
+  }
+
+  .mobile_block_left {
+    display: block;
+    position: absolute;
+    width: vwPC(455);
+    height: vwPC(691);
+    top:vwPC(13);
+    left: vwPC(-81);
+
+    @include phone-down() {
+      display: none;
+    }
   }
 
   .cafe {
@@ -127,18 +183,6 @@
     .relative {
       position: relative;
 
-      .video_placeholder {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, 5%);
-        width: 50.208vw;
-        height: 26.875vw;
-        background: #BCB7B7;
-        border-radius: 3.125vw;
-        z-index: 5;
-      }
-
       .eyebrow {
         position: absolute;
         left: -1.736vw;
@@ -184,26 +228,49 @@
     }
   }
 
-  .union {
-    width: 24.653vw;
-    height: 18.958vw;
+  .mobile {
     position: absolute;
-    bottom: 31.111vw;
-    left: 19.444vw;
-    opacity: 0;
-    transition: all 0.5s ease-out;
+    display: block;
+    width: vwPC(361.47);
+    height: vwPC(642.71);
+    top: vwPC(33);
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 1;
 
     @include phone-down() {
-      width: 24.603vw;
-      height: 18.778vw;
-      left: 21.67vw;
-      bottom: 42.889vw;
+      display: none;
+    }
+  }
+
+  .union {
+    width: vwPC(211);
+    height: vwPC(161.7);
+    position: absolute;
+    bottom: vwPC(395);
+    left: vwPC(304);
+    opacity: 0;
+    transition: all 0.5s ease-out;
+    z-index: 3;
+
+    @include phone-down() {
+      width: vwMB(50.57);
+      height: vwMB(40.6);
+      left: vwMB(78);
+      bottom: vwMB(154.4);
     }
   }
 
   .union_show {
+    width: vwPC(302);
+    height: vwPC(231);
     transition: all 0.5s ease-out;
     opacity: 1;
+
+    @include phone-down() {
+      width: vwMB(88.57);
+      height: vwMB(67.6);
+    }
   }
 
   .union_text {

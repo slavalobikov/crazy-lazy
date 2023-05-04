@@ -18,6 +18,15 @@
   }
 }
 
+.black_line_submobile {
+  height: vwPC(15);
+  background: #000000;
+
+  @include phone-down() {
+    height: vwMB(15);
+  }
+}
+
 .yellow_line_after_block {
   background: $yellow;
   height: 80px;
