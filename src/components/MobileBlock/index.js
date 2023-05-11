@@ -1,8 +1,8 @@
 import React from 'react';
 
 import video_1 from './../../assets/video/video_1.mp4'
-import video_2 from './../../assets/video/video_2.mp4'
-import video_3 from './../../assets/video/video_3.mp4'
+import video_2 from '../../assets/video/video_3.mp4'
+import video_3 from '../../assets/video/video_2.mp4'
 import crazy_mobile_block from './../../assets/img/crazy_mobile_block.png';
 import union_mobile_block from './../../assets/img/union_mobile_block.png';
 import mobile_block_right from './../../assets/img/mobile_block_right.png';

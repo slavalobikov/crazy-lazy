@@ -5,8 +5,8 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import {useInView} from "react-intersection-observer";
 
 import video_1 from './../../assets/video/video_1.mp4'
-import video_2 from './../../assets/video/video_2.mp4'
-import video_3 from './../../assets/video/video_3.mp4'
+import video_2 from '../../assets/video/video_3.mp4'
+import video_3 from '../../assets/video/video_2.mp4'
 import button_white from './../../assets/img/button_white.png';
 import crazy from './../../assets/img/crazy_kent.png';
 import pears from './../../assets/img/pears.png';
