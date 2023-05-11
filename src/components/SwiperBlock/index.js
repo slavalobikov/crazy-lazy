@@ -1,6 +1,12 @@
-import React, {useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import classNames from "classnames";
+import ReactPlayer from 'react-player';
+import {Swiper, SwiperSlide} from 'swiper/react';
+import {useInView} from "react-intersection-observer";
 
+import video_1 from './../../assets/video/video_1.mp4'
+import video_2 from './../../assets/video/video_2.mp4'
+import video_3 from './../../assets/video/video_3.mp4'
 import button_yellow from './../../assets/img/button_yellow.png';
 import button_white from './../../assets/img/button_white.png';
 import crazy from './../../assets/img/crazy_kent.png';
@@ -19,20 +25,61 @@ import crazy_union_3_mobile from './../../assets/img/crazy_union_3_mobile.png';
 import crazy_union_4_mobile from './../../assets/img/crazy_union_4_mobile.png';
 
 import s from './SwiperBlock.module.scss';
+import 'swiper/css';
+import SlideNextButton from "../SliderNextButton";
 
 const SwiperBlock = ({clickToSecretButton}) => {
     const [isHover, setIsHover] = useState(true);
+    const [isClick, setIsClick] = useState(false);
+    const refVideoFirst = useRef(null);
+    const refVideoSecond = useRef(null);
+    const refVideoThird = useRef(null);
+    const {ref, inView} = useInView({
+        threshold: 0.85,
+    });
+
     const [count, setCount] = useState(0);
 
-    const nextSlide = () => {
-        if (count === 3) {
-            return setCount(0)
-        }
-        setCount(prev => prev + 1);
-    }
+    useEffect(() => {
+        refVideoFirst?.current.seekTo(0)
+        refVideoSecond?.current.seekTo(0)
+        refVideoThird?.current.seekTo(0)
+    }, [count])
 
     return (
         <div className={s.swiper_block}>
+            <div className={s.overlay} ref={ref} onClick={() => setIsClick(true)}>
+            <Swiper
+                className={s.swiper}
+                spaceBetween={0}
+                Scrollbar={true}
+                slidesPerView={1}
+                loop={true}
+                onSlideChange={(a) => setCount(a.realIndex)}
+            >
+                <SwiperSlide>
+                <ReactPlayer
+                    loop={true}
+                    ref={refVideoFirst}
+                    volume={isClick}
+                    playing={count === 0 && inView}
+                    width='100%' height='100%' className={s.video} controls={false} url={video_1} />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <ReactPlayer
+                        ref={refVideoSecond}
+                        loop={true}
+                        playing={count === 1 && inView}
+                        width='100%' height='100%' className={s.video} controls={false} url={video_2} />
+                </SwiperSlide>
+                <SwiperSlide> <ReactPlayer
+                    loop={true}
+                    ref={refVideoThird}
+                    playing={count === 2 && inView}
+                    width='100%' height='100%' className={s.video} controls={false} url={video_3} /></SwiperSlide>
+                <SlideNextButton />
+            </Swiper>
+            </div>
             <img className={classNames(s.pears, {
                 [s.animatin_common]: count === 0
             })} src={pears} alt="груши"/>
@@ -125,16 +172,16 @@ const SwiperBlock = ({clickToSecretButton}) => {
                 />
             </>}
             <div className={s.video_block}/>
-            <div className={s.points}>{[0, 1, 2, 3].map((el, index) =>
+            <div className={s.points}>{[0, 1, 2].map((el, index) =>
                 <div onClick={() => setCount(index)} className={classNames(s.point, {
                     [s.active_point]: index === count
-                })} key={index} />)
+                })} key={index}/>)
             }
             </div>
-            <button onClick={nextSlide} className={s.button_yellow}>
+{/*            <button onClick={nextSlide} className={s.button_yellow}>
                 <img src={button_yellow} alt="ЖМИ"/>
                 <div className={s.text}>ЖМИ</div>
-            </button>
+            </button>*/}
             {count === 0 && <button onClick={clickToSecretButton} className={s.button_while}>
                 <img src={button_white} alt="а сюда не жмиииии"/>
                 <div className={s.text}> а сюда<br/> не жмиииии</div>

@@ -13,6 +13,58 @@
     padding-top: vwMB(19);
   }
 
+  .overlay {
+    height: vwPC(455);
+    width: vwPC(805);
+    margin: 0 auto;
+  }
+
+  .swiper {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: vwPC(63);
+    //border: solid;
+    width: vwPC(805);
+    //height: vwPC(455);
+    //border-radius: vwPC(63);
+
+    .video {
+      //pointer-events: none !important;
+      border-radius: vwPC(63);
+      width: vwPC(805);
+      height: vwPC(455);
+      pointer-events: none;
+
+      video {
+        border-radius: vwPC(63) !important;
+        width: vwPC(805) !important;
+        height: vwPC(455) !important;
+      }
+    }
+  }
+
+/*
+  .video {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: vwPC(63);
+    width: vwPC(813) !important;
+    height: vwPC(455) !important;
+
+
+    video {
+      width: vwPC(813) !important;
+      height: vwPC(455) !important;
+      border-radius: vwPC(63);
+!*      width: vwPC(810) !important;
+      height: vwPC(450) !important;
+      border-radius: vwPC(63)*!
+    }
+  }
+*/
+
   .video_block {
     margin-left: auto;
     margin-right: auto;
@@ -21,6 +73,7 @@
     background: #BCB7B7;
     border: vwPC(3) solid #000000;
     border-radius: vwPC(63);
+    opacity: 0;
 
     @include phone-down() {
       width: vwMB(259);
@@ -31,8 +84,8 @@
   }
 
   .button_yellow {
-    margin-top: vwPC(22);
-    margin-left: vwPC(313);
+    margin-top: vwPC(10);
+    //margin-left: vwPC(313);
     position: relative;
     cursor: pointer;
     background: transparent;
@@ -82,7 +135,7 @@
     border: none;
     cursor: pointer;
     margin-left: vwPC(313);
-    margin-top: vwPC(9.43);
+    margin-top: vwPC(116);
 
     @include phone-down() {
       margin-left: vwMB(50.32);
@@ -200,6 +253,7 @@
     bottom: vwPC(226);
     transition: all 0.5s ease-out;
     opacity: 0;
+    z-index: 1;
 
     @include phone-down() {
       width: vwMB(123);
@@ -249,6 +303,7 @@
     opacity: 0;
     transition: all 0.5s ease-out;
     display: block;
+    z-index: 2;
 
     @include phone-down() {
       display: none;
@@ -262,7 +317,7 @@
   .points {
     position: absolute;
     height: vwPC(16.56);
-    width: vwPC(117.25);
+    width: vwPC(87.95);
     left: 50%;
     bottom: vwPC(209.44);
     transform: translate(-50%, 0);

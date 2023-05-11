@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import video from './assets/video/video_1.mp4'
 import s from './App.module.scss';
 import LogoBlock from "./components/LogoBlock";
 import LichiBlock from "./components/LichiBlock";
@@ -7,7 +8,8 @@ import YellowBlock from "./components/YellowBlock";
 import Footer from "./components/Footer";
 import SwiperBlock from "./components/SwiperBlock";
 import MobileBlock from "./components/MobileBlock";
-import {useRef, useState} from "react";
+import React, {useRef, useState} from "react";
+import ReactPlayer from "react-player";
 
 
 function App() {
