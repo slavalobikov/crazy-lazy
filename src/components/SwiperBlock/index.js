@@ -34,10 +34,11 @@ const SwiperBlock = ({clickToSecretButton}) => {
     const refVideoSecond = useRef(null);
     const refVideoThird = useRef(null);
     const {ref, inView} = useInView({
-        threshold: 0.85,
+        threshold: 0.1,
     });
 
     const [count, setCount] = useState(0);
+    const [isBtnPressed, setIsBtnPressed] = useState(false);
 
     useEffect(() => {
         refVideoFirst?.current.seekTo(0)
@@ -51,7 +52,6 @@ const SwiperBlock = ({clickToSecretButton}) => {
             <Swiper
                 className={s.swiper}
                 spaceBetween={0}
-                Scrollbar={true}
                 slidesPerView={1}
                 loop={true}
                 onSlideChange={(a) => setCount(a.realIndex)}
@@ -60,23 +60,28 @@ const SwiperBlock = ({clickToSecretButton}) => {
                 <ReactPlayer
                     loop={true}
                     ref={refVideoFirst}
-                    volume={isClick}
-                    playing={count === 0 && inView}
-                    width='100%' height='100%' className={s.video} controls={false} url={video_1} />
+                    volume={Number(isClick)}
+                    playing={count === 0 && inView && isBtnPressed}
+                    width='100%'
+                    height='100%'
+                    className={s.video}
+                    controls={false}
+                    url={video_1}
+                />
                 </SwiperSlide>
                 <SwiperSlide>
                     <ReactPlayer
                         ref={refVideoSecond}
                         loop={true}
                         playing={count === 1 && inView}
-                        width='100%' height='100%' className={s.video} controls={false} url={video_2} />
+                        width='100%' height='100%' className={s.video} controls={false} url={video_3} />
                 </SwiperSlide>
                 <SwiperSlide> <ReactPlayer
                     loop={true}
                     ref={refVideoThird}
                     playing={count === 2 && inView}
-                    width='100%' height='100%' className={s.video} controls={false} url={video_3} /></SwiperSlide>
-                <SlideNextButton />
+                    width='100%' height='100%' className={s.video} controls={false} url={video_2} /></SwiperSlide>
+                <SlideNextButton isBtnPressed={isBtnPressed} setIsBtnPressed={setIsBtnPressed} />
             </Swiper>
             </div>
             <img className={classNames(s.pears, {
@@ -177,7 +182,7 @@ const SwiperBlock = ({clickToSecretButton}) => {
                 })} key={index}/>)
             }
             </div>
-            {count === 0 && <button onClick={clickToSecretButton} className={s.button_while}>
+            {count === 0 && false && <button onClick={clickToSecretButton} className={s.button_while}>
                 <img src={button_white} alt="а сюда не жмиииии"/>
                 <div className={s.text}> а сюда<br/> не жмиииии</div>
             </button>}
