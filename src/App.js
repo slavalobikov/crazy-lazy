@@ -37,11 +37,15 @@ function App() {
             <YellowBlock/>
             <div className={s.black_line_subvideo}/>
             <SwiperBlock clickToSecretButton={clickToSecretButton}/>
+{/*
             <div className={s.black_line_submobile}/>
+*/}
 {/*
             <MobileBlock refMobileBlock={refMobileBlock} isMobileBlockShow={isMobileBlockShow}/>
 */}
+{/*
             <Footer />
+*/}
         </>
     );
 }
