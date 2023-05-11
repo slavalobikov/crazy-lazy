@@ -7,7 +7,6 @@ import {useInView} from "react-intersection-observer";
 import video_1 from './../../assets/video/video_1.mp4'
 import video_2 from './../../assets/video/video_2.mp4'
 import video_3 from './../../assets/video/video_3.mp4'
-import button_yellow from './../../assets/img/button_yellow.png';
 import button_white from './../../assets/img/button_white.png';
 import crazy from './../../assets/img/crazy_kent.png';
 import pears from './../../assets/img/pears.png';
@@ -178,10 +177,6 @@ const SwiperBlock = ({clickToSecretButton}) => {
                 })} key={index}/>)
             }
             </div>
-{/*            <button onClick={nextSlide} className={s.button_yellow}>
-                <img src={button_yellow} alt="ЖМИ"/>
-                <div className={s.text}>ЖМИ</div>
-            </button>*/}
             {count === 0 && <button onClick={clickToSecretButton} className={s.button_while}>
                 <img src={button_white} alt="а сюда не жмиииии"/>
                 <div className={s.text}> а сюда<br/> не жмиииии</div>

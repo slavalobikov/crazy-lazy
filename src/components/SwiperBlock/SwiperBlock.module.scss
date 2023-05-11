@@ -60,47 +60,6 @@
     }
   }
 
-/*
-  .video {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    top: vwPC(63);
-    width: vwPC(813) !important;
-    height: vwPC(455) !important;
-
-
-    video {
-      width: vwPC(813) !important;
-      height: vwPC(455) !important;
-      border-radius: vwPC(63);
-!*      width: vwPC(810) !important;
-      height: vwPC(450) !important;
-      border-radius: vwPC(63)*!
-    }
-  }
-*/
-
-  /*
-  .video_block {
-    margin-left: auto;
-    margin-right: auto;
-    width: vwPC(813);
-    height: vwPC(455);
-    background: #BCB7B7;
-    border: vwPC(3) solid #000000;
-    border-radius: vwPC(63);
-    opacity: 0;
-
-    @include phone-down() {
-      width: vwMB(259);
-      height: vwMB(145);
-      border-radius: vwMB(17);
-      border: vwMB(1) solid #000000;
-    }
-  }
-  */
-
   .button_yellow {
     margin-top: vwPC(10);
     position: relative;

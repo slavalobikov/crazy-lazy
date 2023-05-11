@@ -12,6 +12,46 @@
     overflow-x: clip;
   }
 
+  .wrapper_swiper {
+    border-radius: vwPC(15);
+    position: relative;
+    width: 23.694444vw;
+    height: 43.5vw;
+    top: vwPC(40);
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 2;
+
+    @include phone-down() {
+      width: vwMB(232);
+      top: 19vw;
+      height: vwMB(423);
+      border-radius: vwMB(25);
+      overflow: hidden;
+    }
+
+    .swiper {
+      //height: 33.5vw;
+      width: 23.694444vw;
+      border-radius: vwPC(47);
+
+      @include phone-down() {
+        width: 100%;
+        height: vwMB(423);
+      }
+
+      video {
+        pointer-events: none;
+        width: 76vw !important;
+
+        @include phone-down() {
+          width: 207vw !important;
+        }
+      }
+    }
+  }
+
+
   .video_placeholder {
     position: absolute;
     top: vwPC(187);
@@ -38,6 +78,7 @@
       position: absolute;
       left: vwMB(4);
       bottom: vwMB(9);
+      z-index: 5;
     }
   }
 
