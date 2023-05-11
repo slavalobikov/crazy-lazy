@@ -17,6 +17,11 @@
     height: vwPC(455);
     width: vwPC(805);
     margin: 0 auto;
+
+    @include phone-down() {
+      height: vwMB(145);
+      width: vwMB(259);
+    }
   }
 
   .swiper {
@@ -24,22 +29,33 @@
     left: 50%;
     transform: translate(-50%, 0);
     top: vwPC(63);
-    //border: solid;
     width: vwPC(805);
-    //height: vwPC(455);
-    //border-radius: vwPC(63);
+
+    @include phone-down() {
+        top: vwMB(19);
+        width: vwMB(259);
+
+    }
 
     .video {
-      //pointer-events: none !important;
       border-radius: vwPC(63);
       width: vwPC(805);
       height: vwPC(455);
       pointer-events: none;
 
+      @include phone-down() {
+        width: vwMB(259);
+      }
+
       video {
         border-radius: vwPC(63) !important;
         width: vwPC(805) !important;
         height: vwPC(455) !important;
+
+        @include phone-down() {
+          width: vwMB(259) !important;
+          height: vwMB(145) !important;
+        }
       }
     }
   }
@@ -85,7 +101,6 @@
 
   .button_yellow {
     margin-top: vwPC(10);
-    //margin-left: vwPC(313);
     position: relative;
     cursor: pointer;
     background: transparent;
@@ -93,8 +108,7 @@
     display: block;
 
     @include phone-down() {
-      margin-top: vwMB(16.91);
-      margin-left: vwMB(50.32);
+      margin-top: vwMB(17);
     }
 
     img {
@@ -140,6 +154,8 @@
     @include phone-down() {
       margin-left: vwMB(50.32);
       margin-top: vwMB(3.5);
+      position: absolute;
+      bottom: vwMB(20);
     }
 
     img {
@@ -274,6 +290,7 @@
       right: vwMB(12);
       bottom: vwMB(85.06);
       transition: all 0.5s ease-out;
+      z-index: 1;
     }
   }
 
@@ -333,7 +350,7 @@
     }
 
     .point {
-      cursor: pointer;
+      //cursor: pointer;
       width: vwPC(16.56);
       height: vwPC(16.56);
       border-radius: 50%;

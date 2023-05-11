@@ -173,7 +173,7 @@ const SwiperBlock = ({clickToSecretButton}) => {
             </>}
             <div className={s.video_block}/>
             <div className={s.points}>{[0, 1, 2].map((el, index) =>
-                <div onClick={() => setCount(index)} className={classNames(s.point, {
+                <div className={classNames(s.point, {
                     [s.active_point]: index === count
                 })} key={index}/>)
             }
