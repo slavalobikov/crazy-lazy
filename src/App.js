@@ -43,9 +43,9 @@ function App() {
 {/*
             <MobileBlock refMobileBlock={refMobileBlock} isMobileBlockShow={isMobileBlockShow}/>
 */}
-{/*
+
             <Footer />
-*/}
+
         </>
     );
 }
