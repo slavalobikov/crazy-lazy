@@ -8,6 +8,12 @@ import video_1 from './../../assets/video/video_1.mp4'
 import video_2 from '../../assets/video/video_3.mp4'
 import video_3 from '../../assets/video/video_2.mp4'
 import button_white from './../../assets/img/button_white.png';
+import first_video_left from './../../assets/img/first_video_left.png';
+import first_video_right from './../../assets/img/first_video_right.png';
+import second_video_left from './../../assets/img/second_video_left.png';
+import second_video_right from './../../assets/img/second_video_right.png';
+import third_video_left from './../../assets/img/third_video_left.png';
+import third_video_right from './../../assets/img/third_video_right.png';
 import crazy from './../../assets/img/crazy_kent.png';
 import pears from './../../assets/img/pears.png';
 import pears_mobile from './../../assets/img/pears_mobile.png';
@@ -26,6 +32,8 @@ import crazy_union_4_mobile from './../../assets/img/crazy_union_4_mobile.png';
 import s from './SwiperBlock.module.scss';
 import 'swiper/css';
 import SlideNextButton from "../SliderNextButton";
+import SliderPrevButton from "../SliderPrevButton";
+import button_yellow from "../../assets/img/button_yellow.png";
 
 const SwiperBlock = ({clickToSecretButton}) => {
     const [isHover, setIsHover] = useState(true);
@@ -49,42 +57,64 @@ const SwiperBlock = ({clickToSecretButton}) => {
     return (
         <div className={s.swiper_block}>
             <div className={s.overlay} ref={ref} onClick={() => setIsClick(true)}>
-            <Swiper
-                className={s.swiper}
-                spaceBetween={0}
-                slidesPerView={1}
-                loop={true}
-                onSlideChange={(a) => setCount(a.realIndex)}
-            >
-                <SwiperSlide>
-                <ReactPlayer
+                <Swiper
+                    className={s.swiper}
+                    spaceBetween={0}
+                    slidesPerView={1}
                     loop={true}
-                    ref={refVideoFirst}
-                    volume={Number(isClick)}
-                    playing={count === 0 && inView && isBtnPressed}
-                    width='100%'
-                    height='100%'
-                    className={s.video}
-                    controls={false}
-                    url={video_1}
-                />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <ReactPlayer
-                        ref={refVideoSecond}
+                    onSlideChange={(a) => setCount(a.realIndex)}
+                >
+                    <SwiperSlide>
+                        <ReactPlayer
+                            loop={true}
+                            ref={refVideoFirst}
+                            volume={Number(isClick)}
+                            playing={count === 0 && inView && isBtnPressed}
+                            width='100%'
+                            height='100%'
+                            className={s.video}
+                            controls={false}
+                            url={video_1}
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <ReactPlayer
+                            ref={refVideoSecond}
+                            loop={true}
+                            playing={count === 1 && inView}
+                            width='100%' height='100%' className={s.video} controls={false} url={video_3}/>
+                    </SwiperSlide>
+                    <SwiperSlide> <ReactPlayer
                         loop={true}
-                        playing={count === 1 && inView}
-                        width='100%' height='100%' className={s.video} controls={false} url={video_3} />
-                </SwiperSlide>
-                <SwiperSlide> <ReactPlayer
-                    loop={true}
-                    ref={refVideoThird}
-                    playing={count === 2 && inView}
-                    width='100%' height='100%' className={s.video} controls={false} url={video_2} /></SwiperSlide>
-                <SlideNextButton isBtnPressed={isBtnPressed} setIsBtnPressed={setIsBtnPressed} />
-            </Swiper>
+                        ref={refVideoThird}
+                        playing={count === 2 && inView}
+                        width='100%' height='100%' className={s.video} controls={false} url={video_2}/></SwiperSlide>
+
+                    <SliderPrevButton />
+
+                    <SlideNextButton />
+
+
+
+                </Swiper>
             </div>
-            <img className={classNames(s.pears, {
+            {!isBtnPressed && <button onClick={() => setIsBtnPressed(true)} className={s.button_yellow_go}>
+                <img src={button_yellow} alt="ЖМИ"/>
+                <div className={s.text}>ЖМИ</div>
+            </button>}
+            {count === 0 && <>
+                <img className={s.first_video_left} src={first_video_left} alt="fruits"/>
+                <img className={s.first_video_right} src={first_video_right} alt="fruits"/>
+            </>}
+            {count === 1 && <>
+                <img className={s.second_video_left} src={second_video_left} alt="fruits"/>
+                <img className={s.second_video_right} src={second_video_right} alt="fruits"/>
+            </>}
+            {count === 2 && <>
+                <img className={s.third_video_left} src={third_video_left} alt="fruits"/>
+                <img className={s.third_video_right} src={third_video_right} alt="fruits"/>
+            </>}
+            {/*<img className={classNames(s.pears, {
                 [s.animatin_common]: count === 0
             })} src={pears} alt="груши"/>
             <img className={classNames(s.pears_mobile, {
@@ -185,7 +215,7 @@ const SwiperBlock = ({clickToSecretButton}) => {
             {count === 0 && false && <button onClick={clickToSecretButton} className={s.button_while}>
                 <img src={button_white} alt="а сюда не жмиииии"/>
                 <div className={s.text}> а сюда<br/> не жмиииии</div>
-            </button>}
+            </button>}*/}
         </div>
     )
 

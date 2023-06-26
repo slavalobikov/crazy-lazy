@@ -13,6 +13,89 @@
     padding-top: vwMB(19);
   }
 
+  .first_video_left {
+    position: absolute;
+    top: vwPC(90);
+    left: vwPC(44);
+    width: vwPC(395);
+    height: vwPC(643);
+    z-index: 1;
+    display: block;
+
+    @include phone-down() {
+      display: none;
+    }
+  }
+
+  .first_video_right {
+    position: absolute;
+    top:vwPC(14);
+    z-index: 1;
+    right: 0;
+    width: vwPC(395.2);
+    height: vwPC(728);
+    display: block;
+
+    @include phone-down() {
+      display: none;
+    }
+  }
+
+  .second_video_left {
+    position: absolute;
+    top: vwPC(116);
+    left: vwPC(20);
+    width: vwPC(478);
+    height: vwPC(641.22);
+    z-index: 1;
+    display: block;
+
+    @include phone-down() {
+      display: none;
+    }
+  }
+
+  .second_video_right {
+    position: absolute;
+    display: block;
+    width: vwPC(434);
+    height: vwPC(690);
+    top: vwPC(37);
+    right: vwPC(20);
+    z-index: 1;
+
+    @include phone-down() {
+      display: none;
+    }
+  }
+
+  .third_video_left {
+    position: absolute;
+    display: block;
+    z-index: 1;
+    width: vwPC(433.8);
+    height: vwPC(655.86);
+    top: vwPC(73.15);
+    left: vwPC(39.22);
+
+    @include phone-down() {
+      display: none;
+    }
+  }
+
+  .third_video_right {
+    position: absolute;
+    display: block;
+    z-index: 1;
+    width: vwPC(366.85);
+    height: vwPC(644.8);
+    top: vwPC(99.17);
+    right: vwPC(11);
+    @include phone-down() {
+      display: none;
+    }
+  }
+
   .overlay {
     height: vwPC(455);
     width: vwPC(805);
@@ -61,6 +144,62 @@
     }
   }
 
+  .button_yellow_go {
+    position: relative;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    display: block;
+    margin-top: vwPC(51);
+    margin-left: vwPC(643);
+
+    img {
+      width: vwPC(165.86);
+      height: vwPC(84.57);
+      cursor: pointer;
+      z-index: 5;
+
+      @include phone-down() {
+        width: vwMB(63.25);
+        height: vwMB(32.28);
+      }
+    }
+
+    .text {
+      position: absolute;
+      pointer-events: none;
+      top: 50%;
+      left: 50%;
+      color: #000000;
+      transform: translate(-50%, -50%);
+      transition: all 0.2s ease-out;
+      font-family: 'Yanone Kaffeesatz';
+      font-style: normal;
+      font-weight: 400;
+      font-size: vwPC(65);
+      line-height: vwPC(65);
+      text-align: center;
+
+    }
+  }
+
+  .prev_btn {
+    cursor: pointer;
+    margin-top: vwPC(47);
+    margin-left: vwPC(240);
+    width: vwPC(72);
+    height: vwPC(80);
+  }
+
+  .next_btn {
+    cursor: pointer;
+    width: vwPC(72);
+    height: vwPC(80);
+    margin-top: vwPC(-80);
+    margin-left: vwPC(515);
+  }
+
+  /*
   .button_yellow {
     margin-top: vwPC(10);
     position: relative;
@@ -104,6 +243,7 @@
       }
     }
   }
+  */
 
   .button_while {
     position: relative;
