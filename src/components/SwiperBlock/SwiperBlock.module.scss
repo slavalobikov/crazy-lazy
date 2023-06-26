@@ -27,6 +27,16 @@
     }
   }
 
+  .left_animation {
+    animation: startFirstVideo 0.3s ease-out;
+    animation-fill-mode: forwards;
+  }
+
+  .right_animation {
+    animation: startRightVideo 0.3s ease-out;
+    animation-fill-mode: forwards;
+  }
+
   .first_video_right {
     position: absolute;
     top:vwPC(14);
@@ -41,6 +51,34 @@
     }
   }
 
+  .first_video_mobile_left {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: vwMB(141);
+    height: vwMB(264);
+    top: vwMB(4);
+    left: vwMB(-27);
+
+    @include phone-down() {
+      display: block;
+    }
+  }
+
+  .first_video_right_mobile {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: vwMB(137.7);
+    height: vwMB(237);
+    top: vwMB(31);
+    right: vwMB(-21.8);
+
+    @include phone-down() {
+      display: block;
+    }
+  }
+
   .second_video_left {
     position: absolute;
     top: vwPC(116);
@@ -52,6 +90,34 @@
 
     @include phone-down() {
       display: none;
+    }
+  }
+
+  .second_video_left_mobile {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: vwMB(147);
+    height: vwMB(263);
+    top:vwMB(4);
+    left: vwMB(-27);
+
+    @include phone-down() {
+      display: block;
+    }
+  }
+
+  .second_video_right_mobile {
+    display: none;
+    position: absolute;
+    width: vwMB(139.81);
+    height: vwMB(237);
+    top: vwMB(33);
+    right: vwMB(-21.8);
+    z-index: 1;
+
+    @include phone-down() {
+      display: block;
     }
   }
 
@@ -83,6 +149,21 @@
     }
   }
 
+  .third_video_left_mobile {
+    display: none;
+    width: vwMB(146);
+    height: vwMB(250);
+    z-index: 1;
+    position: absolute;
+    left: vwMB(-27);
+    top: vwMB(4);
+
+
+    @include phone-down() {
+      display: block;
+    }
+  }
+
   .third_video_right {
     position: absolute;
     display: block;
@@ -93,6 +174,20 @@
     right: vwPC(11);
     @include phone-down() {
       display: none;
+    }
+  }
+
+  .third_video_right_mobile {
+    display: none;
+    position: absolute;
+    width: vwMB(138.81);
+    height: vwMB(237);
+    top: vwMB(33);
+    right: vwMB(-21.8);
+    z-index: 1;
+
+    @include phone-down() {
+      display: block;
     }
   }
 
@@ -144,106 +239,54 @@
     }
   }
 
-  .button_yellow_go {
-    position: relative;
-    cursor: pointer;
-    background: transparent;
-    border: none;
-    display: block;
-    margin-top: vwPC(51);
-    margin-left: vwPC(643);
+  .btn_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: vwPC(47);
+    margin-left: vwPC(240);
+    width: vwPC(346);
 
-    img {
+    @include phone-down() {
+      width: vwMB(103.06);
+      height: vwMB(25.19);
+      margin-left: vwMB(80);
+      margin-top: vwMB(10);
+    }
+
+    .go_btn {
       width: vwPC(165.86);
       height: vwPC(84.57);
       cursor: pointer;
-      z-index: 5;
 
       @include phone-down() {
-        width: vwMB(63.25);
-        height: vwMB(32.28);
+        width: vwMB(49.4);
+        height: vwMB(25.19);
       }
     }
 
-    .text {
-      position: absolute;
-      pointer-events: none;
-      top: 50%;
-      left: 50%;
-      color: #000000;
-      transform: translate(-50%, -50%);
-      transition: all 0.2s ease-out;
-      font-family: 'Yanone Kaffeesatz';
-      font-style: normal;
-      font-weight: 400;
-      font-size: vwPC(65);
-      line-height: vwPC(65);
-      text-align: center;
-
-    }
-  }
-
-  .prev_btn {
-    cursor: pointer;
-    margin-top: vwPC(47);
-    margin-left: vwPC(240);
-    width: vwPC(72);
-    height: vwPC(80);
-  }
-
-  .next_btn {
-    cursor: pointer;
-    width: vwPC(72);
-    height: vwPC(80);
-    margin-top: vwPC(-80);
-    margin-left: vwPC(515);
-  }
-
-  /*
-  .button_yellow {
-    margin-top: vwPC(10);
-    position: relative;
-    cursor: pointer;
-    background: transparent;
-    border: none;
-    display: block;
-
-    @include phone-down() {
-      margin-top: vwMB(17);
-    }
-
-    img {
-      width: vwPC(165.86);
-      height: vwPC(84.57);
+    .prev_btn {
+      cursor: pointer;
+      width: vwPC(72);
+      height: vwPC(80);
 
       @include phone-down() {
-        width: vwMB(63.25);
-        height: vwMB(32.28);
+        width: vwMB(21.45);
+        height: vwMB(23.83);
       }
     }
 
-    .text {
-      position: absolute;
-      pointer-events: none;
-      top: 50%;
-      left: 50%;
-      color: #000000;
-      transform: translate(-50%, -50%);
-      transition: all 0.2s ease-out;
-      font-family: 'Yanone Kaffeesatz';
-      font-style: normal;
-      font-weight: 400;
-      font-size: vwPC(65);
-      line-height: vwPC(65);
-      text-align: center;
+    .next_btn {
+      cursor: pointer;
+      width: vwPC(72);
+      height: vwPC(80);
 
       @include phone-down() {
-        font-size: vwMB(20);
-        line-height: vwMB(20);
+        width: vwMB(21.45);
+        height: vwMB(23.83);
       }
     }
   }
-  */
 
   .button_while {
     position: relative;
@@ -553,6 +596,25 @@
     to {
       transform: scale(1);
       opacity: 1;
+    }
+  }
+
+  @keyframes startFirstVideo {
+    from {
+      left: vwPC(-500);
+
+      @include phone-down() {
+        left: vwMB(-200);
+      }
+    }
+  }
+  @keyframes startRightVideo {
+    from {
+      right: vwPC(-500);
+
+      @include phone-down() {
+        right: vwMB(-200);
+      }
     }
   }
 }

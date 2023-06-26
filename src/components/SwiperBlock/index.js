@@ -9,11 +9,18 @@ import video_2 from '../../assets/video/video_3.mp4'
 import video_3 from '../../assets/video/video_2.mp4'
 import button_white from './../../assets/img/button_white.png';
 import first_video_left from './../../assets/img/first_video_left.png';
+import first_video_mobile from '../../assets/img/first_video_mobile_left.png';
 import first_video_right from './../../assets/img/first_video_right.png';
+import first_video_right_mobile from './../../assets/img/first_video_right_mobile.png';
 import second_video_left from './../../assets/img/second_video_left.png';
+import second_video_left_mobile from './../../assets/img/second_video_left_mobile.png';
 import second_video_right from './../../assets/img/second_video_right.png';
+import second_video_right_mobile from './../../assets/img/second_video_right_mobile.png';
 import third_video_left from './../../assets/img/third_video_left.png';
+import third_video_left_mobile from './../../assets/img/third_video_left_mobile.png';
 import third_video_right from './../../assets/img/third_video_right.png';
+import third_video_right_mobile from './../../assets/img/third_video_right_mobile.png';
+import go_btn from './../../assets/img/go_btn.png';
 import crazy from './../../assets/img/crazy_kent.png';
 import pears from './../../assets/img/pears.png';
 import pears_mobile from './../../assets/img/pears_mobile.png';
@@ -90,29 +97,32 @@ const SwiperBlock = ({clickToSecretButton}) => {
                         playing={count === 2 && inView}
                         width='100%' height='100%' className={s.video} controls={false} url={video_2}/></SwiperSlide>
 
-                    <SliderPrevButton />
-
-                    <SlideNextButton />
-
+                    <div className={s.btn_wrapper}>
+                        <SliderPrevButton setIsBtnPressed={setIsBtnPressed}/>
+                        {!isBtnPressed && <img onClick={() => setIsBtnPressed(true)} className={s.go_btn} src={go_btn} alt="go"/>}
+                        <SlideNextButton setIsBtnPressed={setIsBtnPressed}/>
+                    </div>
 
 
                 </Swiper>
             </div>
-            {!isBtnPressed && <button onClick={() => setIsBtnPressed(true)} className={s.button_yellow_go}>
-                <img src={button_yellow} alt="ЖМИ"/>
-                <div className={s.text}>ЖМИ</div>
-            </button>}
             {count === 0 && <>
-                <img className={s.first_video_left} src={first_video_left} alt="fruits"/>
-                <img className={s.first_video_right} src={first_video_right} alt="fruits"/>
+                <img className={classNames(s.first_video_left, s.left_animation)} src={first_video_left} alt="fruits"/>
+                <img className={classNames(s.first_video_mobile_left, s.left_animation)} src={first_video_mobile} alt="fruits"/>
+                <img className={classNames(s.first_video_right, s.right_animation)} src={first_video_right} alt="fruits"/>
+                <img className={classNames(s.first_video_right_mobile, s.right_animation)} src={first_video_right_mobile} alt="fruits"/>
             </>}
             {count === 1 && <>
-                <img className={s.second_video_left} src={second_video_left} alt="fruits"/>
-                <img className={s.second_video_right} src={second_video_right} alt="fruits"/>
+                <img className={classNames(s.second_video_left, s.left_animation)} src={second_video_left} alt="fruits"/>
+                <img className={classNames(s.second_video_left_mobile, s.left_animation)} src={second_video_left_mobile} alt="fruits"/>
+                <img className={classNames(s.second_video_right, s.right_animation)} src={second_video_right} alt="fruits"/>
+                <img className={classNames(s.second_video_right_mobile, s.right_animation)} src={second_video_right_mobile} alt="fruits"/>
             </>}
             {count === 2 && <>
-                <img className={s.third_video_left} src={third_video_left} alt="fruits"/>
-                <img className={s.third_video_right} src={third_video_right} alt="fruits"/>
+                <img className={classNames(s.third_video_left, s.left_animation)} src={third_video_left} alt="fruits"/>
+                <img className={classNames(s.third_video_left_mobile, s.left_animation)} src={third_video_left_mobile} alt="fruits"/>
+                <img className={classNames(s.third_video_right, s.right_animation)} src={third_video_right} alt="fruits"/>
+                <img className={classNames(s.third_video_right_mobile, s.right_animation)} src={third_video_right_mobile} alt="fruits"/>
             </>}
             {/*<img className={classNames(s.pears, {
                 [s.animatin_common]: count === 0
