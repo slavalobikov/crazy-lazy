@@ -41,6 +41,7 @@ import 'swiper/css';
 import SlideNextButton from "../SliderNextButton";
 import SliderPrevButton from "../SliderPrevButton";
 import button_yellow from "../../assets/img/button_yellow.png";
+import GoBtn from "../GoBtn";
 
 const SwiperBlock = ({clickToSecretButton}) => {
     const [isHover, setIsHover] = useState(true);
@@ -99,7 +100,10 @@ const SwiperBlock = ({clickToSecretButton}) => {
 
                     <div className={s.btn_wrapper}>
                         <SliderPrevButton setIsBtnPressed={setIsBtnPressed}/>
+                        <GoBtn isBtnPressed={isBtnPressed} setIsBtnPressed={setIsBtnPressed} />
+{/*
                         <img onClick={() => setIsBtnPressed(true)} className={s.go_btn} src={go_btn} alt="go"/>
+*/}
                         <SlideNextButton setIsBtnPressed={setIsBtnPressed}/>
                     </div>
 

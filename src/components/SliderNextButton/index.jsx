@@ -8,7 +8,7 @@ export default function SlideNextButton({setIsBtnPressed}) {
     return (
         <div onClick={() => {
             swiper.slideNext()
-            setIsBtnPressed(false)
+            setIsBtnPressed(true)
         }} className={s.next_btn}>
             <img src={next_btn} alt="next"/>
         </div>
