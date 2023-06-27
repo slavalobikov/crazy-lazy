@@ -88,18 +88,18 @@ const SwiperBlock = ({clickToSecretButton}) => {
                         <ReactPlayer
                             ref={refVideoSecond}
                             loop={true}
-                            playing={count === 1 && inView}
+                            playing={count === 1 && inView && isBtnPressed}
                             width='100%' height='100%' className={s.video} controls={false} url={video_3}/>
                     </SwiperSlide>
                     <SwiperSlide> <ReactPlayer
                         loop={true}
                         ref={refVideoThird}
-                        playing={count === 2 && inView}
+                        playing={count === 2 && inView && isBtnPressed}
                         width='100%' height='100%' className={s.video} controls={false} url={video_2}/></SwiperSlide>
 
                     <div className={s.btn_wrapper}>
                         <SliderPrevButton setIsBtnPressed={setIsBtnPressed}/>
-                        {!isBtnPressed && <img onClick={() => setIsBtnPressed(true)} className={s.go_btn} src={go_btn} alt="go"/>}
+                        <img onClick={() => setIsBtnPressed(true)} className={s.go_btn} src={go_btn} alt="go"/>
                         <SlideNextButton setIsBtnPressed={setIsBtnPressed}/>
                     </div>
 

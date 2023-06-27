@@ -9,7 +9,7 @@ const SliderPrevButton = ({setIsBtnPressed}) => {
     return (
         <div onClick={() => {
             swiper.slidePrev()
-            setIsBtnPressed(true)
+            setIsBtnPressed(false)
         }}>
             <img className={s.prev_btn} src={prev_btn} alt="prev"/>
         </div>
