@@ -1,13 +1,12 @@
 import React, {useEffect, useRef, useState} from 'react';
 import classNames from "classnames";
-import ReactPlayer from 'react-player';
+import ReactPlayer from 'react-player/lazy';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {useInView} from "react-intersection-observer";
 
 import video_1 from './../../assets/video/video_1.mp4'
 import video_2 from '../../assets/video/video_3.mp4'
 import video_3 from '../../assets/video/video_2.mp4'
-import button_white from './../../assets/img/button_white.png';
 import first_video_left from './../../assets/img/first_video_left.png';
 import first_video_mobile from '../../assets/img/first_video_mobile_left.png';
 import first_video_right from './../../assets/img/first_video_right.png';
@@ -20,27 +19,11 @@ import third_video_left from './../../assets/img/third_video_left.png';
 import third_video_left_mobile from './../../assets/img/third_video_left_mobile.png';
 import third_video_right from './../../assets/img/third_video_right.png';
 import third_video_right_mobile from './../../assets/img/third_video_right_mobile.png';
-import go_btn from './../../assets/img/go_btn.png';
-import crazy from './../../assets/img/crazy_kent.png';
-import pears from './../../assets/img/pears.png';
-import pears_mobile from './../../assets/img/pears_mobile.png';
-import crazy_show_union from './../../assets/img/crazy_show_union.png';
-import swiper_people_2 from './../../assets/img/swiper_people_2.png';
-import crazy_union_2 from './../../assets/img/crazy_union_2.png';
-import crazy_3 from './../../assets/img/fruits_logo.png';
-import crazy_3_union from './../../assets/img/crazy_union_3.png';
-import crazy_4 from './../../assets/img/crazy_3.png';
-import crazy_4_union from './../../assets/img/crazy_4_union.png';
-import lazy_show_table from './../../assets/img/lazy_show_table.png';
-import crazy_union_2_mobile from './../../assets/img/crazy_union_2_mobile.png';
-import crazy_union_3_mobile from './../../assets/img/crazy_union_3_mobile.png';
-import crazy_union_4_mobile from './../../assets/img/crazy_union_4_mobile.png';
 
 import s from './SwiperBlock.module.scss';
 import 'swiper/css';
 import SlideNextButton from "../SliderNextButton";
 import SliderPrevButton from "../SliderPrevButton";
-import button_yellow from "../../assets/img/button_yellow.png";
 import GoBtn from "../GoBtn";
 
 const SwiperBlock = ({clickToSecretButton}) => {
