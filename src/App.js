@@ -9,7 +9,6 @@ import Footer from "./components/Footer";
 import SwiperBlock from "./components/SwiperBlock";
 import MobileBlock from "./components/MobileBlock";
 import React, {useRef, useState} from "react";
-import ReactPlayer from "react-player";
 
 
 function App() {
@@ -36,7 +35,9 @@ function App() {
             <OrangeBlock/>
             <YellowBlock/>
             <div className={s.black_line_subvideo}/>
+{/*
             <SwiperBlock clickToSecretButton={clickToSecretButton}/>
+*/}
 {/*
             <div className={s.black_line_submobile}/>
 */}
