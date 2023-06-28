@@ -31,7 +31,7 @@ const LogoBlock = ({scrollToLich}) => {
 
                 <div className={s.text}>
                     <div>
-                        Новый <b>Energy напиток</b>, который ты точно оценишь. Для настроения тут самые <b>Crazy
+                        Новый <b>напиток</b>, который ты точно оценишь. Для настроения тут самые <b>Crazy
                         цвета и вкусы! </b>
                         <img className={s.smile} src={smile} alt="мордочка"/>
                     </div>
@@ -54,7 +54,7 @@ const LogoBlock = ({scrollToLich}) => {
 
                 <div className={s.text_mobile}>
                     <div>
-                        Новый <b>Energy напиток</b>, который <img className={s.smile} src={smile} alt="мордочка"/> ты
+                        Новый <b>напиток</b>, который <img className={s.smile} src={smile} alt="мордочка"/> ты
                         точно оценишь. Для настроения тут самые <b>Crazy
                         цвета и вкусы! </b>
 
